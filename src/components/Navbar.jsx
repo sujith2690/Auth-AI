@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
+import Buttons from "./Buttons";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +20,9 @@ const Navbar = () => {
 
     return (
         <section className="bg-transparent shadow-sm">
-            <div className="flex items-center justify-between w-full p-4 px-6 md:px-10">
+            <div className="flex items-center justify-between w-full p-4 md:px-10">
                 <div>
-                    <img src="images/logo.png" alt="" />
+                    <img src="images/logo.png" loading="lazy" alt="" />
                 </div>
                 <div className="hidden md:flex items-center justify-end gap-6 md:w-1/2 whitespace-nowrap">
                     {navigation.map((item) => (
@@ -38,9 +39,8 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className="hidden md:flex lg:pr-40">
-                        <button className=" bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-full text-white px-8 py-1 text-sm border-0 border-[#A0EAFF]">
-                            Get Started
-                        </button>
+                        <Buttons content={'Get Started'} />
+
                     </div>
                 </div>
 
@@ -68,9 +68,10 @@ const Navbar = () => {
                             {item.name} {item.dropDown ? <span><FaAngleDown /></span> : ''}
                         </Link>
                     ))}
-                    <button className=" bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-full text-white px-8 py-1 text-sm border-0 border-[#A0EAFF]">
+                    {/* <button className=" bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-full text-white px-8 py-1 text-sm border-0 border-[#A0EAFF]">
                         Get Started
-                    </button>
+                    </button> */}
+                    <Buttons content={'Get Started'} />
                 </div>
             )}
         </section>

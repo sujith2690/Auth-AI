@@ -1,10 +1,18 @@
 import React from 'react'
+import Hero from '../homePageCom/Hero'
+import Transform from '../homePageCom/Transform'
+import Services from '../common/Services'
+import Clients from '../homePageCom/Clients'
 
 const HomePage = () => {
+
     return (
-        <div className='text-white'>
-            <h1>Home Page</h1>
-        </div>
+        <>
+            <Hero />
+            <Transform/>
+            <Services/>
+            <Clients/>
+        </>
     )
 }
 

@@ -7,34 +7,75 @@
 
 @layer base {
   html {
+    color: #F2F2F2;
     font-family: 'Heebo', sans-serif;
   }
 
-  /* Use Heebo for headings */
+  /* General styling */
   h1,
   h2,
   h3,
   h4,
   h5,
-  h6,p {
+  h6,
+  p {
+    color: #F2F2F2;
     font-family: 'Heebo', sans-serif;
   }
-}
+
+  /* Specific sizes */
+  h1 {
+    font-size: 64px;
+    /* Large, primary title */
+  }
+
+  h2 {
+    font-size: 56px;
+    /* Slightly smaller title */
+  }
+
+  h3 {
+    font-size: 48px;
+    /* Provided size */
+  }
+
+  h4 {
+    font-size: 28px;
+    /* Provided size */
+  }
+
+  h5 {
+    font-size: 20px;
+    /* Small heading, often a subtitle */
+  }
+
+  h6 {
+    font-size: 18px;
+    /* Smallest heading */
+  }
+
+  p {
+    font-size: 16px;
+    color: #B5B3B3;
+    /* Specific color for <p> */
+  }
 
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* font-family: 'Heebo', sans-serif; */
-}
 
-::-webkit-scrollbar {
-  background: #1157da5d;
-  width: 6px;
-}
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Heebo', sans-serif; */
+  }
 
-::-webkit-scrollbar-thumb {
-  background: #002569;
-  border-radius: 6px;
+  ::-webkit-scrollbar {
+    background: #011c4d5d;
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #050E17;
+    border-radius: 6px;
+  }
 }
