@@ -1,10 +1,14 @@
 import React from 'react'
 
 import { lazy, Suspense } from 'react'
-import Navbar from './components/Navbar'
+import Navbar from './components/common/Navbar'
 import HomePage from './components/pages/HomePage'
 import Loading from './components/pages/Loading'
 import { Route, Routes } from 'react-router-dom'
+import AboutPage from './components/pages/AboutPage'
+import ContactPage from './components/pages/ContactPage'
+import ServicesPage from './components/pages/ServicesPage'
+import FaqPage from './components/pages/FaqPage'
 
 const App = () => {
   return (
@@ -14,6 +18,11 @@ const App = () => {
           <Navbar />
           <Routes>
             <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/services' element={<ServicesPage/>} />
+            <Route path='/faq' element={<FaqPage/>} />
+
             <Route path='/loading' element={<Loading />} />
           </Routes>
         </Suspense>

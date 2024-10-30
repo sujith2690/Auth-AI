@@ -1,5 +1,5 @@
 import React from 'react'
-import Buttons from '../Buttons'
+import Buttons from '../common/Buttons'
 import Strategy from './Strategy'
 
 const Hero = () => {

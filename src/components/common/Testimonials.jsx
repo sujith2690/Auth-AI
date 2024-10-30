@@ -1,6 +1,6 @@
 import React from 'react'
-import Buttons from '../Buttons'
-import Carousel from '../common/carousel'
+import Buttons from './Buttons'
+import Carousel from './carousel'
 
 const Testimonials = () => {
     return (
