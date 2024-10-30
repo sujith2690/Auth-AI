@@ -20,11 +20,11 @@ const Navbar = () => {
 
     return (
         <section className="bg-transparent shadow-sm">
-            <div className="flex items-center justify-between w-full p-4 md:px-10">
+            <div className="flex items-center justify-between w-full p-4 lg:px-10">
                 <div>
                     <img src="images/logo.png" loading="lazy" alt="" />
                 </div>
-                <div className="hidden md:flex items-center justify-end gap-6 md:w-1/2 whitespace-nowrap">
+                <div className="hidden lg:flex items-center justify-end gap-1 md:gap-6 md:w-1/2 whitespace-nowrap">
                     {navigation.map((item) => (
                         <Link key={item.name}
                             to={item.href}
@@ -38,13 +38,12 @@ const Navbar = () => {
                             {item.name} {item.dropDown ? <span><FaAngleDown /></span> : ''}
                         </Link>
                     ))}
-                    <div className="hidden md:flex lg:pr-40">
+                    <div className="hidden lg:flex lg:pr-24">
                         <Buttons content={'Get Started'} />
-
                     </div>
                 </div>
 
-                <div className="md:hidden flex items-center mr-16">
+                <div className="lg:hidden flex items-center md:mr-16">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-2xl focus:outline-none text-white"
@@ -54,7 +53,7 @@ const Navbar = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="flex flex-col items-center text-white w-full py-4 px-6 space-y-4 md:hidden ">
+                <div className="flex flex-col items-center text-white w-full py-4 px-6 space-y-4 lg:hidden ">
                     {navigation.map((item) => (
                         <Link key={item.name}
                             to={item.href}

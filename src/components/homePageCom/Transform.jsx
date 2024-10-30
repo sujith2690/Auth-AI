@@ -5,7 +5,7 @@ const Transform = () => {
     return (
         <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
-                <div className="relative flex w-full md:w-auto gap-10">
+                <div className="relative flex w-full md:w-auto gap-8 p-6">
                     <img
                         src="images/homePage/home2.png"
                         className="w-full h-auto object-cover md:h-full md:w-full"
