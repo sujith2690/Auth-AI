@@ -1,19 +1,22 @@
 import React from 'react'
+import image1 from '../../assets/images/homePage/Vector1.png'
+import image2 from '../../assets/images/homePage/Vector2.png'
+import image3 from '../../assets/images/homePage/Vector3.png'
 
 const Strategy = () => {
     const strategies = [
         {
-            image: 'images/homePage/Vector1.png',
+            image: image1,
             subHead: 'Mobile Application Development',
             content: 'Achieve Mobile Supremacy through Custom App Development Solutions'
         },
         {
-            image: 'images/homePage/Vector2.png',
+            image: image2,
             subHead: 'IT Consulting & Strategy',
             content: 'Connect IT and Business for Unparalleled Success with Our Expert Consulting, Aligning IT and Growth'
         },
         {
-            image: 'images/homePage/Vector3.png',
+            image: image3,
             subHead: 'Website Application Development',
             content: 'Our full-stack development services provide end - to -end  solutions'
         },

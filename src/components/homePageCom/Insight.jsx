@@ -1,24 +1,27 @@
 import React from 'react'
+import image1 from '../../assets/images/homePage/explore1.png'
+import image2 from '../../assets/images/homePage/explore2.png'
+import image3 from '../../assets/images/homePage/explore3.png'
 
 const Insight = () => {
     const content = [
         {
             title: 'Data Analytics ',
-            image: 'images/homePage/explore1.png',
+            image: image1,
             date: 'Oct 12, 2024',
             heading: 'Unleashing Data Analytics: Driving Business Growth',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus...'
         },
         {
             title: 'E-Commerce',
-            image: 'images/homePage/explore2.png',
+            image: image2,
             date: 'Oct 15, 2024',
             heading: 'E-commerce Trends: Adapting to Digital Consumers',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus...'
         },
         {
             title: 'Cyber Security',
-            image: 'images/homePage/explore3.png',
+            image: image3,
             date: 'Oct 16, 2024',
             heading: 'Cybersecurity Challenges: Strategies for Protection',
             content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus...'
@@ -39,7 +42,7 @@ const Insight = () => {
                             {
                                 content.map((item, i) => (
                                     <div key={i} className="max-w-sm overflow-hidden shadow-lg bg-[#0A1828] rounded-3xl relative">
-                                        <img className="w-full" src={item.image} alt="Sunset in the mountains" />
+                                        <img className="w-full" src={item.image} alt="Sunset in the mountains" loading='lazy' />
                                         <div className="absolute top-2 left-2 p-2">
                                             <span className="text-black text-[12px] bg-[#22AAD2] px-2 py-1 rounded-full">{item.title}</span>
                                         </div>

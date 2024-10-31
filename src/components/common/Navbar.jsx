@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
 import Buttons from "./Buttons";
+import logo from '../../assets/images/logo.png';
+
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +24,7 @@ const Navbar = () => {
         <section className="bg-transparent shadow-sm">
             <div className="flex items-center justify-between w-full p-4 lg:px-10">
                 <div>
-                    <img src="images/logo.png" loading="lazy" alt="" />
+                    <img src={logo} loading="lazy" alt="" />
                 </div>
                 <div className="hidden lg:flex items-center justify-end gap-1 md:gap-6 md:w-1/2 whitespace-nowrap">
                     {navigation.map((item) => (

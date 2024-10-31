@@ -1,25 +1,29 @@
 import React from 'react'
 import Buttons from '../common/Buttons'
+import image1 from '../../assets/images/portfolio/Image1.png'
+import image2 from '../../assets/images/portfolio/Image2.png'
+import image3 from '../../assets/images/portfolio/Image3.png'
+import image4 from '../../assets/images/portfolio/Image4.png'
 
 const Portfolio = () => {
     const portFolioContent = [
         {
-            image: 'images/portfolio/Image1.png',
+            image: image1,
             title: 'Figo Tech',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus purus sit amet varius aliquet.'
         },
         {
-            image: 'images/portfolio/Image2.png',
+            image: image2,
             title: 'News Feed',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus purus sit amet varius aliquet.'
         },
         {
-            image: 'images/portfolio/Image3.png',
+            image: image3,
             title: 'Food Application',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus purus sit amet varius aliquet.'
         },
         {
-            image: 'images/portfolio/Image4.png',
+            image: image4,
             title: 'Crio Loan App',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam rhoncus purus sit amet varius aliquet.'
         },
@@ -38,7 +42,7 @@ const Portfolio = () => {
                 <div className='grid grid-cols-2 gap-4'>
                     {portFolioContent.map((item, i) => (
                         <div key={i} className={`relative h-full overflow-hidden rounded-2xl ${i % 2 === 1 ? 'mt-3' : ''}`}>
-                            <img src={item.image} alt="" className='md:w-[400px]  md:h-[500px] object-cover' />
+                            <img src={item.image} alt="" loading='lazy' className='md:w-[400px]  md:h-[500px] object-cover' />
                             <div className='absolute inset-0 bg-gradient-to-t from-[#132030] to-transparent'>
                                 <div className='absolute bottom-0 left-0 w-full p-2 md:p-10 flex flex-col gap-3'>
                                     <h5 className='text-lg md:text-xl '>{item.title}</h5>

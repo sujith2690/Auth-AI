@@ -1,5 +1,6 @@
 import React from 'react';
 import Buttons from '../common/Buttons';
+import image from '../../assets/images/homePage/home2.png'
 
 const Transform = () => {
     return (
@@ -7,9 +8,10 @@ const Transform = () => {
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
                 <div className="relative flex w-full md:w-auto gap-8 p-6">
                     <img
-                        src="images/homePage/home2.png"
+                        src={image}
                         className="w-full h-auto object-cover md:h-full md:w-full"
                         alt="home2.png"
+                        loading='lazy'
                     />
                     <div className="absolute bottom-0 left-0 flex w-full flex-col gap-6 items-start justify-start bg-[#060F1AE5] p-4 md:static md:bg-transparent text-left">
                         <p className="text-[#22AAD2] text-[12px] md:text-lg">― About Us</p>

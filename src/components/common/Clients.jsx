@@ -28,7 +28,7 @@ const Clients = () => {
         <div className='flex items-center justify-center gap-10 md:gap-20  bg-gradient-to-r from-[#0788AE] to-[#22AAD2] p-5  md:py-3'>
             {
                 specialData.map((item, i) => (
-                    <div className='flex flex-col items-center  md:p-2'>
+                    <div key={i} className='flex flex-col items-center  md:p-2'>
                         <h1 className='text-sm  md:text-4xl lg:text-6xl text-center'>{item.data}</h1>
                         <h4 className='text-sm md:text-2xl text-center'>{item.type}</h4>
                     </div>

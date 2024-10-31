@@ -1,6 +1,7 @@
 import React from 'react'
 import Buttons from '../common/Buttons'
 import Strategy from './Strategy'
+import image from '../../assets/images/homePage/Background Image3.png'
 
 const Hero = () => {
 
@@ -19,7 +20,7 @@ const Hero = () => {
                     </p>
                     <Buttons content={'Get Started'} />
                 </div>
-                <img className='w-full max-h-[500px] object-cover z-0' src="images/homePage/Background Image 1.png" alt="" />
+                <img className='w-full max-h-[500px] object-cover z-0' src={image} alt="" loading='lazy' />
             </div>
             <Strategy />
         </div>

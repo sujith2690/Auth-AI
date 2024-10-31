@@ -3,7 +3,7 @@ import Hero from '../homePageCom/Hero'
 import Transform from '../homePageCom/Transform'
 import Services from '../common/Services'
 import Clients from '../common/Clients'
-import Value from '../homePageCom/Value'
+import Value from '../common/Value'
 import Portfolio from '../homePageCom/Portfolio'
 import Something from '../common/Something'
 import Testimonials from '../common/Testimonials'
@@ -24,7 +24,7 @@ const HomePage = () => {
             <Value />
             <Portfolio />
             <Something />
-            <Testimonials />
+            <Testimonials /> 
             <Insight />
             <Happy />
             <Footer/>

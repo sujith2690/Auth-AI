@@ -1,4 +1,7 @@
 import React from 'react'
+import image1 from '../../assets/images/aboutPage/team1.png'
+import image2 from '../../assets/images/aboutPage/team2.png'
+import image3 from '../../assets/images/aboutPage/team3.png'
 
 const Team = () => {
     return (
@@ -18,7 +21,7 @@ const Team = () => {
                 <div className="flex gap-4 md:gap-2 overflow-hidden z-10">
                     {/* First Image with Overlay */}
                     <div className="relative w-32 md:w-48 lg:w-56 h-[180px] lg:h-[300px]">
-                        <img src="images/aboutPage/team1.png" className="w-full h-full object-cover rounded-lg" alt="Team member 1" />
+                        <img src={image1} className="w-full h-full object-cover rounded-lg" alt="Team member 1" />
                         <div className="absolute bottom-2 left-1 right-1 transform  bg-[#0A1828] bg-opacity-70  text-white md:text-sm lg:text-base rounded-lg">
                             <p className="font-bold text-center text-base">Liam Smith</p>
                             <p className="text-sm text-[#22AAD2] text-center">CEO & Co-Founder</p>
@@ -28,13 +31,13 @@ const Team = () => {
 
                     {/* Second Image with Semi-Transparent Overlay */}
                     <div className="relative w-24 md:w-28 h-[180px] lg:h-[300px]">
-                        <img src="images/aboutPage/team2.png" className="w-full h-full object-cover rounded-lg" alt="Team member 2" />
+                        <img src={image2} className="w-full h-full object-cover rounded-lg" alt="Team member 2" />
                         <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
                     </div>
 
                     {/* Third Image with Semi-Transparent Overlay */}
                     <div className="relative w-24 md:w-28 lg:w-20 h-[180px] lg:h-[300px]">
-                        <img src="images/aboutPage/team3.png" className="w-full h-full object-cover rounded-lg" alt="Team member 3" />
+                        <img src={image3} className="w-full h-full object-cover rounded-lg" alt="Team member 3" />
                         <div className="absolute inset-0 bg-black bg-opacity-30 rounded-lg"></div>
                     </div>
                 </div>

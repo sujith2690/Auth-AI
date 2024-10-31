@@ -1,7 +1,13 @@
 import React from 'react'
+import image1 from '../../assets/images/homePage/Background Image3.png'
+import logo1 from '../../assets/images/homePage/customers/logo 1.png'
+import logo2 from '../../assets/images/homePage/customers/logo 2.png'
+import logo3 from '../../assets/images/homePage/customers/logo 3.png'
+import logo4 from '../../assets/images/homePage/customers/logo 4.png'
+import logo5 from '../../assets/images/homePage/customers/logo 5.png'
 
 const Happy = () => {
-    const customerLogos = ['logo 1.png', 'logo 2.png', 'logo 3.png', 'logo 4.png', 'logo 5.png',]
+    const customerLogos = [logo1, logo2, logo3, logo4, logo5]
     return (
         <div>
             <div className='relative'>
@@ -13,16 +19,16 @@ const Happy = () => {
                         {
                             customerLogos.map((item, i) => (
                                 <div className='flex items-center justify-center ' key={i}>
-                                    <img className='w-28 h-6 md:w-36 md:h-10' src={`images/homePage/customers/${item}`} alt="" />
+                                    <img className='w-28 h-6 md:w-36 md:h-10' src={item} alt="" loading='lazy' />
                                 </div>
                             ))
                         }
                     </div>
-                    <div>
+                    {/* <div>
                         <img src="" alt="" />
-                    </div>
+                    </div> */}
                 </div>
-                <img className='w-full max-h-[250px] object-cover z-0' src="images/homePage/Background Image3.png" alt="" />
+                <img className='w-full max-h-[250px] object-cover z-0' src={image1} alt="" />
             </div>
         </div>
     )

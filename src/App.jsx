@@ -9,6 +9,7 @@ import AboutPage from './components/pages/AboutPage'
 import ContactPage from './components/pages/ContactPage'
 import ServicesPage from './components/pages/ServicesPage'
 import FaqPage from './components/pages/FaqPage'
+import ServiceDetail from './components/pages/ServiceDetail'
 
 const App = () => {
   return (
@@ -21,8 +22,8 @@ const App = () => {
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contact' element={<ContactPage />} />
             <Route path='/services' element={<ServicesPage/>} />
+            <Route path="/services/serviceDetails/:serviceName" element={<ServiceDetail />} />
             <Route path='/faq' element={<FaqPage/>} />
-
             <Route path='/loading' element={<Loading />} />
           </Routes>
         </Suspense>

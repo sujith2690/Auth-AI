@@ -1,5 +1,11 @@
 import React from 'react'
 import CommonHero from '../common/CommonHero'
+import Services from '../common/Services'
+import Value from '../common/Value'
+import Something from '../common/Something'
+import Testimonials from '../common/Testimonials'
+import Happy from '../common/Happy'
+import Footer from '../common/Footer'
 
 const ServicesPage = () => {
     const heading = 'Our Services'
@@ -8,7 +14,12 @@ const ServicesPage = () => {
     return (
         <>
             <CommonHero heading={heading} content={content} />
-            
+            <Services />
+            <Value />
+            <Something />
+            <Testimonials />
+            <Happy/>
+            <Footer/>
         </>
     )
 }
