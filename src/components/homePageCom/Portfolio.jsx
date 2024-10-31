@@ -30,11 +30,11 @@ const Portfolio = () => {
     ]
     return (
         <div className='flex flex-col items-center justify-center p-5 overflow-auto bg-inherit'>
-            <div className='p-5'>
+            <div className='p-5 space-y-5'>
                 <div>
                     <p className='text-[#22AAD2] text-center text-sm md:text-2xl'>― Our Portfolio</p>
                 </div>
-                <h5 className='flex flex-col text-xl md:text-2xl lg:text-4xl '>
+                <h5 className='flex flex-col text-xl md:text-2xl lg:text-4xl text-center'>
                     Work Speaks Volumes: Discover Our Projects
                 </h5>
             </div>

@@ -16,8 +16,9 @@ const Navbar = () => {
         { name: 'Home', href: '/', current: true },
         { name: 'About Us', href: '/about', current: false },
         { name: 'Services', href: '/services', current: false, dropDown: true },
-        { name: 'Pages', href: '/pages', current: false, dropDown: true },
+        // { name: 'Pages', href: '/pages', current: false, dropDown: true },
         { name: 'Contact Us', href: '/contact', current: false },
+        { name: 'Faq', href: '/faq', current: false },
     ]
 
     return (
@@ -29,6 +30,7 @@ const Navbar = () => {
                 <div className="hidden lg:flex items-center justify-end gap-1 md:gap-6 md:w-1/2 whitespace-nowrap">
                     {navigation.map((item) => (
                         <Link key={item.name}
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
                             to={item.href}
                             className={classNames(
                                 item.href === location.pathname
@@ -55,9 +57,13 @@ const Navbar = () => {
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="flex flex-col items-center text-white w-full py-4 px-6 space-y-4 lg:hidden ">
+                <div className="flex flex-col items-center text-white w-full md:py-4 md:px-6 space-y-2 lg:hidden ">
                     {navigation.map((item) => (
                         <Link key={item.name}
+                            onClick={() => {
+                                console.log('Menu item clicked');
+                                setIsMenuOpen(!isMenuOpen);
+                            }}
                             to={item.href}
                             className={classNames(
                                 item.href === location.pathname
@@ -69,9 +75,6 @@ const Navbar = () => {
                             {item.name} {item.dropDown ? <span><FaAngleDown /></span> : ''}
                         </Link>
                     ))}
-                    {/* <button className=" bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-full text-white px-8 py-1 text-sm border-0 border-[#A0EAFF]">
-                        Get Started
-                    </button> */}
                     <Buttons content={'Get Started'} />
                 </div>
             )}

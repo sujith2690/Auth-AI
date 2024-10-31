@@ -10,6 +10,8 @@ import ContactPage from './components/pages/ContactPage'
 import ServicesPage from './components/pages/ServicesPage'
 import FaqPage from './components/pages/FaqPage'
 import ServiceDetail from './components/pages/ServiceDetail'
+import MobileApplication from './components/pages/MobileApplication'
+import WebApplication from './components/pages/WebApplication'
 
 const App = () => {
   return (
@@ -21,9 +23,11 @@ const App = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/about' element={<AboutPage />} />
             <Route path='/contact' element={<ContactPage />} />
-            <Route path='/services' element={<ServicesPage/>} />
+            <Route path='/services' element={<ServicesPage />} />
             <Route path="/services/serviceDetails/:serviceName" element={<ServiceDetail />} />
-            <Route path='/faq' element={<FaqPage/>} />
+            <Route path='/faq' element={<FaqPage />} />
+            <Route path='/mobile-application-development' element={<MobileApplication />} />
+            <Route path='/web-application-development' element={<WebApplication />} />
             <Route path='/loading' element={<Loading />} />
           </Routes>
         </Suspense>

@@ -33,7 +33,7 @@ import VideoPlayModal from './VideoPlayModal';
 import { useParams } from 'react-router-dom';
 
 const ServiceDetails = () => {
-   
+
     const { serviceName } = useParams();
     const [serviceContent, setServiceContent] = useState({})
     // console.log(serviceName, '------55----serviceName')
@@ -146,17 +146,14 @@ const ServiceDetails = () => {
     }, [serviceName])
 
     return (
-        // <div className='text-white'>
-        //     {serviceContent.subHeading}
-        // </div>
         <div className='flex items-center justify-center bg-inherit p-5'>
             <div className='flex items-center justify-center p-5'>
-                <div className='w-4/6 flex flex-col gap-10'>
+                <div className='md:w-4/6 flex flex-col gap-10'>
                     <div className='flex flex-col md:flex-row items-center justify-between gap-2 md:gap-16 '>
-                        <div className=' w-1/2'>
+                        <div className=' md:w-1/2'>
                             <h3 className="text-lg md:text-3xl font-bold text-white">{serviceContent.heading}</h3>
                         </div>
-                        <div className=' w-1/2'>
+                        <div className=' md:w-1/2'>
                             <p className="text-[#22AAD2]  text-sm lg:text-lg text-center md:text-start">
                                 {serviceContent.subHeading}
                             </p>

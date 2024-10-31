@@ -12,7 +12,7 @@ const Hero = () => {
                     <p className='text-lg md:text-2xl'>
                         Welcome to <span className='text-[#22AAD2]'>AUTH AI SOLUTIONS</span>
                     </p>
-                    <h1 className='text-4xl md:text-5xl lg:text-7xl flex flex-col text-center items-center justify-center '>
+                    <h1 className='text-2xl md:text-5xl lg:text-7xl flex flex-col text-center items-center justify-center '>
                         AI Solutions for an Innovative <span>Tomorrow</span>
                     </h1>
                     <p className='text-[#E3E3E3] text-sm text-center'>

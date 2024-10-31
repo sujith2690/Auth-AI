@@ -99,12 +99,12 @@ const Carousel = () => {
                 <button onClick={handlePrevious} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
                     <img src={prev} alt="Previous" loading='lazy' />
                 </button>
-                <div className='grid place-items-center grid-cols-3 gap-10 md:gap-5'>
+                <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6'>
                     {visibleData.map((item, i) => (
-                        <div key={i} className={`bg-[#0A1828] h-50 md:w-80 md:h-80 text-center flex flex-col gap-3 md:gap-2 items-center justify-center p-3 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
-                            <p className='italic text-[#B5B3B3] hidden md:flex text-sm md:text-base'>{item.quote}</p>
+                        <div key={i} className={`bg-[#0A1828] h-5/6 md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                            <p className='italic text-[#B5B3B3] hidden md:flex text-sm '>{item.quote}</p>
                             <img src={item.image} alt={item.name} loading='lazy' />
-                            <p className='text-white text-sm lg:text-lg'>{item.name}</p>
+                            <p className='text-white text-sm lg:text-base'>{item.name}</p>
                             <p className='text-[#22AAD2] text-sm lg:text-base'>{item.position}</p>
                         </div>
                     ))}
@@ -121,7 +121,7 @@ const Carousel = () => {
                     <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
                 ))}
                 <button onClick={handleNext} className='flex lg:hidden  items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-16 lg:h-16 rotate-180 rounded-full border-2 border-white'>
-                    <img src={prev} alt="Next" loading='lazy'/>
+                    <img src={prev} alt="Next" loading='lazy' />
                 </button>
             </div>
         </div>

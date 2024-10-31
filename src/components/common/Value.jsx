@@ -35,10 +35,10 @@ const Value = () => {
     ]
     return (
         <>
-            <div className='flex flex-col items-center justify-center bg-inherit p-5'>
+            <div className='flex flex-col items-center justify-center bg-inherit md:p-5'>
                 <div>
                     <div className='flex flex-col md:flex-row items-center justify-center'>
-                        <div className='w-2/3 md:w-1/2'>
+                        <div className='w-5/6 md:w-1/2'>
                             <div className='p-2  flex flex-col gap-3'>
                                 <p className='text-[#22AAD2] text-start text-sm md:text-lg '>― Our Value</p>
                                 <h3 className='flex flex-col text-2xl md:text-3xl lg:text-5xl'>
@@ -68,8 +68,8 @@ const Value = () => {
                                 }
                             </div>
                         </div>
-                        <div className='bg-[#060F1A] rounded-2xl p-5'>
-                            <div className='flex flex-col gap-5 md:gap-5 md:p-5' >
+                        <div className='bg-[#0f243c] w-5/6 md:w-2/6 rounded-2xl p-5 mt-3 md:mt-0  md:p-5'>
+                            <div className='flex flex-col gap-2 md:gap-5 md:p-5' >
                                 {
                                     barData.map((item, i) => (
                                         <div key={i} className='flex flex-col gap-2' >

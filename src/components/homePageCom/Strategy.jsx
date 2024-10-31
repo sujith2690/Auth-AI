@@ -23,7 +23,7 @@ const Strategy = () => {
     ]
     return (
         <div className='bg-[#060F1A] flex items-center'>
-            <div className='max-w-[1640px]  mx-auto p-4 py-4 grid md:grid-cols-3 place-items-center gap-12 mt-12 md:mt-0'>
+            <div className='max-w-[1640px]  mx-auto p-4 py-4 grid md:grid-cols-3 place-items-center gap-2 md:gap-12 mt-12 md:mt-0'>
                 {
                     strategies.map((item, i) => (
                         <div key={i} className='bg-[#0A1828] w-full h-full md:w-72 md:h-[150px] p-5 px-5 py-3 text-white rounded-xl  flex flex-col justify-between '>
