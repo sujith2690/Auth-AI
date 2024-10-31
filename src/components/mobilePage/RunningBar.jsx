@@ -16,7 +16,6 @@ import mongodb from '../../assets/images/mobile/mongodb.png';
 import bootstrap from '../../assets/images/mobile/bootstrap.png';
 import angular from '../../assets/images/mobile/angular.png';
 import typeScript from '../../assets/images/mobile/typeScript.png';
-import next from '../../assets/images/mobile/nextJs.png';
 
 import Marquee from "react-fast-marquee";
 
@@ -39,7 +38,6 @@ const RunningBar = () => {
         bootstrap,
         angular,
         typeScript,
-        next,
     ];
 
     return (
