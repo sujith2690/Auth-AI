@@ -101,7 +101,7 @@ const Carousel = () => {
                 </button>
                 <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6'>
                     {visibleData.map((item, i) => (
-                        <div key={i} className={`bg-[#0A1828] h-5/6 md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                        <div key={i} className={`bg-[#0A1828] h-full md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
                             <p className='italic text-[#B5B3B3] hidden md:flex text-sm '>{item.quote}</p>
                             <img src={item.image} alt={item.name} loading='lazy' />
                             <p className='text-white text-sm lg:text-base'>{item.name}</p>

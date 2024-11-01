@@ -4,6 +4,8 @@ import { FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from 'react-router-dom';
 import Buttons from "./Buttons";
 import logo from '../../assets/images/logo.png';
+import { GiHamburgerMenu } from "react-icons/gi";
+import { IoClose } from "react-icons/io5";
 
 
 const Navbar = () => {
@@ -23,7 +25,7 @@ const Navbar = () => {
 
     return (
         <section className="bg-transparent shadow-sm">
-            <div className="flex items-center justify-between w-full p-4 lg:px-10">
+            <div className="flex items-center justify-between w-full p-2 md:p-4 lg:px-10">
                 <div>
                     <img src={logo} loading="lazy" alt="" />
                 </div>
@@ -52,12 +54,13 @@ const Navbar = () => {
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-2xl focus:outline-none text-white"
                     >
-                        ☰
+                        {/* ☰ */}
+                        {isMenuOpen ?  <IoClose /> : <GiHamburgerMenu />}
                     </button>
                 </div>
             </div>
             {isMenuOpen && (
-                <div className="flex flex-col items-center text-white w-full md:py-4 md:px-6 space-y-2 lg:hidden ">
+                <div className="flex flex-col items-center mb-2 md:mb-0 text-white w-full p-2 md:py-4 md:px-6 space-y-2 lg:hidden ">
                     {navigation.map((item) => (
                         <Link key={item.name}
                             onClick={() => {

@@ -2,32 +2,35 @@ import React from 'react'
 
 import { lazy, Suspense } from 'react'
 import Navbar from './components/common/Navbar'
-import HomePage from './components/pages/HomePage'
 import Loading from './components/pages/Loading'
 import { Route, Routes } from 'react-router-dom'
-import AboutPage from './components/pages/AboutPage'
-import ContactPage from './components/pages/ContactPage'
-import ServicesPage from './components/pages/ServicesPage'
-import FaqPage from './components/pages/FaqPage'
-import ServiceDetail from './components/pages/ServiceDetail'
-import MobileApplication from './components/pages/MobileApplication'
-import WebApplication from './components/pages/WebApplication'
+
 
 const App = () => {
+
+  const Home = lazy(() => import('./components/pages/HomePage'))
+  const About = lazy(() => import('./components/pages/AboutPage'))
+  const Contact = lazy(() => import('./components/pages/ContactPage'))
+  const Services = lazy(() => import('./components/pages/ServicesPage'))
+  const ServiceDetails = lazy(() => import('./components/pages/ServiceDetail'))
+  const Faq = lazy(() => import('./components/pages/FaqPage'))
+  const Mobile = lazy(() => import('./components/pages/MobileApplication'))
+  const Web = lazy(() => import('./components/pages/WebApplication'))
+
   return (
     <>
       <div className="h-screen  bg-[#050E17] ">
         <Suspense fallback={<Loading />}>
           <Navbar />
           <Routes>
-            <Route path='/' element={<HomePage />} />
-            <Route path='/about' element={<AboutPage />} />
-            <Route path='/contact' element={<ContactPage />} />
-            <Route path='/services' element={<ServicesPage />} />
-            <Route path="/services/serviceDetails/:serviceName" element={<ServiceDetail />} />
-            <Route path='/faq' element={<FaqPage />} />
-            <Route path='/mobile-application-development' element={<MobileApplication />} />
-            <Route path='/web-application-development' element={<WebApplication />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/services' element={<Services />} />
+            <Route path="/services/serviceDetails/:serviceName" element={<ServiceDetails />} />
+            <Route path='/faq' element={<Faq />} />
+            <Route path='/mobile-application-development' element={<Mobile />} />
+            <Route path='/web-application-development' element={<Web />} />
             <Route path='/loading' element={<Loading />} />
           </Routes>
         </Suspense>
