@@ -13,7 +13,7 @@ const Transform = () => {
                         alt="home2.png"
                         loading='lazy'
                     />
-                    <div className="absolute bottom-0 left-0 flex w-full flex-col gap-6 items-start justify-start bg-[#060F1AE5] p-4 md:static md:bg-transparent text-left">
+                    <div className="absolute bottom-0 left-0 flex w-full flex-col md:gap-6 items-start justify-start bg-[#060F1AE5] p-4 md:static md:bg-transparent text-left">
                         <p className="text-[#22AAD2] text-[12px] md:text-lg">― About Us</p>
                         <h3 className="text-lg md:text-3xl font-bold text-white">Transforming Visions into Reality</h3>
                         <p className="mt-4 text-[10px] md:text-sm text-[#E3E3E3] font-thin">

@@ -44,7 +44,7 @@ const Portfolio = () => {
                         <div key={i} className={`relative h-full overflow-hidden rounded-2xl ${i % 2 === 1 ? 'mt-3' : ''}`}>
                             <img src={item.image} alt="" loading='lazy' className='md:w-[400px]  md:h-[500px] object-cover' />
                             <div className='absolute inset-0 bg-gradient-to-t from-[#132030] to-transparent'>
-                                <div className='absolute bottom-0 left-0 w-full p-2 md:p-10 flex flex-col gap-3'>
+                                <div className='absolute bottom-0 left-0 w-full p-2 md:p-10 flex flex-col md:gap-3'>
                                     <h5 className='text-lg md:text-xl '>{item.title}</h5>
                                     <p className='text-[#E3E3E3] text-sm lg:text-'>{item.description}</p>
                                     <div className='mt-2'>

@@ -33,16 +33,15 @@ const Footer = () => {
     return (
         <footer className='bg-inherit '>
             <div className='flex items-center justify-center'>
-                <div className=" bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 sm:grid-cols-4 gap-2 w-5/6 ">
-                    <div className='flex items-center justify-center w-5/6'>
-                        <div className=' flex flex-col gap-2'>
+                <div className=" bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 sm:grid-cols-4 gap-3 w-5/6 ">
+                    <div className='flex items-center justify-center   p-2'>
+                        <div className=' flex flex-col gap-2  '>
                             <p className='flex text-center text-sm'>
                                 {
                                     path == 'contact' ? 'Ready to embark on your AI journey? Reach out to us today!' : "Our innovative solutions are designed not just to meet the demands of today but to anticipate the challenges of tomorrow, ensuring that your business stays ahead of the curve."
                                 }
-
                             </p>
-                            <div className='flex  justify-center gap-2'>
+                            <div className='flex items-center justify-center gap-4'>
                                 {
                                     socialIcons.map((item, i) => (
                                         <p key={i} className='w-10 h-10 bg-[#22AAD2] rounded-full text-black flex items-center justify-center'>{item}</p>

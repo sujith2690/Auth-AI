@@ -71,7 +71,7 @@ const Services = () => {
     return (
         <div className='flex flex-col items-center  justify-center p-4 bg-[#050E17]'>
             <div className='flex flex-col gap-4 p-4'>
-                <p className="text-[#22AAD2] text-[12px] md:text-lg">― About Us</p>
+                <p className="text-[#22AAD2] text-[12px] md:text-lg">― Our Services</p>
                 <h3 className='flex flex-col text-center text-2xl md:text-4xl'>
                     From Concept to Reality: Building <span>Tomorrow's Solutions Today</span>
                 </h3>

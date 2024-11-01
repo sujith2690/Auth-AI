@@ -16,7 +16,6 @@ const WebApplication = () => {
             <RunningBar />
             <FutureWeb />
             <Footer />
-
         </>
     )
 }
