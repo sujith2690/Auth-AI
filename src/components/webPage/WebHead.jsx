@@ -18,15 +18,15 @@ const WebHead = () => {
                                 />
                             </div>
                             <div className=" flex w-full flex-col md:gap-6 items-start justify-start bg-[#060F1AE5] md:p-4 md:static md:bg-transparent text-left">
-                                <p className="text-[#22AAD2] text-[12px] md:text-lg">― Mobile Applications</p>
+                                <p className="text-[#22AAD2] text-sm md:text-lg">― Mobile Applications</p>
                                 <h3 className="text-lg md:text-3xl font-bold text-white">{heading}</h3>
-                                <p className="text-[#E3E3E3] text-[12px] md:text-sm font-thin ">
+                                <p className="text-[#E3E3E3] text-sm md:text-sm font-thin ">
                                     {content}
                                 </p>
                             </div>
                         </div>
                         <div>
-                            <p className="text-[#E3E3E3]  md:flex text-[12px] md:text-base font-thin">
+                            <p className="text-[#E3E3E3]  md:flex text-sm md:text-base font-thin">
                                 {content2}
                             </p>
                         </div>

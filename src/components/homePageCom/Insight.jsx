@@ -44,11 +44,11 @@ const Insight = () => {
                                     <div key={i} className="max-w-sm overflow-hidden shadow-lg bg-[#0A1828] rounded-3xl relative">
                                         <img className="w-full" src={item.image} alt="Sunset in the mountains" loading='lazy' />
                                         <div className="absolute top-2 left-2 p-2">
-                                            <span className="text-black text-[12px] bg-[#22AAD2] px-2 py-1 rounded-full">{item.title}</span>
+                                            <span className="text-black text-sm bg-[#22AAD2] px-2 py-1 rounded-full">{item.title}</span>
                                         </div>
                                         <div className="px-6 py-4">
-                                            <span className="text-[12px] text-[#22AAD2]">{item.date}</span>
-                                            <div className="font-bold text-[12px] md:text-lg mb-2">{item.heading}</div>
+                                            <span className="text-sm text-[#22AAD2]">{item.date}</span>
+                                            <div className="font-bold sm md:text-lg mb-2">{item.heading}</div>
                                             <p className="text-gray-700 text-base hidden md:flex">
                                                 {item.content}
                                             </p>

@@ -13,7 +13,7 @@ const CommonHero = ({ heading, content }) => {
                         <h1 className="text-2xl md:text-5xl lg:text-7xl text-center whitespace-nowrap">
                             {heading}
                         </h1>
-                        <p className='text-[#B5B3B3] text-[12px] md:text-sm text-center'>
+                        <p className='text-[#B5B3B3] text-sm text-center'>
                             {content}
                         </p>
                     </div>

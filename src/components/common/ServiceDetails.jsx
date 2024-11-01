@@ -167,12 +167,12 @@ const ServiceDetails = () => {
 
                     <div className='flex items-center justify-between gap-5'>
                         <div className="flex md:flex-col flex-row gap-3">
-                            <p className='text-[10px] md:text-sm'>
+                            <p className='text-sm'>
                                 {serviceContent.content}
                             </p>
                         </div>
                         <div className="flex md:flex-col flex-row gap-3">
-                            <p className='text-[10px] md:text-sm'>
+                            <p className='text-sm'>
                                 {serviceContent.content2}
                             </p>
                         </div>

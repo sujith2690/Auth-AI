@@ -92,7 +92,7 @@ const Footer = () => {
             </div>
             <div className='flex items-center justify-center bg-[#0D151F] p-3 '>
                 <div>
-                    <p className='text-[10px] md:text-sm text-[#E0E2E259] text-center'>Copyright © 2024 Haidezign. All Right Reserved.</p>
+                    <p className='text-sm md:text-sm text-[#E0E2E259] text-center'>Copyright © 2024 Haidezign. All Right Reserved.</p>
                 </div>
             </div>
         </footer>

@@ -48,7 +48,7 @@ const Value = () => {
                                     <p className='text-sm md:text-base tracking-tighter font-extralight'>Our diverse expertise spans multiple industries, empowering businesses of all sizes to harness the transformative power of AI and unlock invaluable data-driven insights.</p>
                                 </div>
                             </div>
-                            <div className='flex flex-col gap-2'>
+                            <div className='flex flex-col gap-5'>
                                 {
                                     integrity.map((item, i) => (
                                         <div key={i} className='flex gap-4 items-center'>

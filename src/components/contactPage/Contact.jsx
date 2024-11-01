@@ -27,7 +27,7 @@ const Contact = () => {
                         key={i}
                         className='bg-[#0A1823] w-[120px] h-[120px] md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'>
                         <span className="text-[#22AAD2] text-xl md:text-3xl">{item.icon}</span>
-                        <p className='text-white text-[10px] md:text-base text-center'>
+                        <p className='text-white text-sm md:text-base text-center'>
                             {item.details}
                         </p>
                     </div>

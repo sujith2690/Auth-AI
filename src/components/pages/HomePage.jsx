@@ -10,6 +10,9 @@ import Testimonials from '../common/Testimonials'
 import Insight from '../homePageCom/Insight'
 import Happy from '../common/Happy'
 import Footer from '../common/Footer'
+import CommonHero from '../common/CommonHero'
+
+
 
 const HomePage = () => {
 
@@ -21,13 +24,13 @@ const HomePage = () => {
             <Transform />
             <Services />
             <Clients />
-            <Value /> 
+            <Value />
             <Portfolio />
             <Something />
-            <Testimonials /> 
+            <Testimonials />
             <Insight />
             <Happy />
-            <Footer/>
+            <Footer />
         </>
     )
 }
