@@ -30,20 +30,22 @@ const Contact = () => {
 
     return (
         <div className='relative flex items-center justify-center'>
-            <div className='flex flex-wrap items-center justify-center gap-6 md:gap-10'>
-                {address.map((item, i) => (
-                    <div
-                        key={i}
-                        className='bg-[#0A1823] w-[120px] h-[120px] md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'
-                        data-aos="fade-up" // AOS animation
-                        data-aos-duration={(i + 1) * 200} // Varying duration for each item
-                    >
-                        <span className="text-[#22AAD2] text-xl md:text-3xl">{item.icon}</span>
-                        <p className='text-white text-sm md:text-base text-center'>
-                            {item.details}
-                        </p>
-                    </div>
-                ))}
+            <div>
+                <div className='grid grid-cols-3 items-center justify-center p-5  gap-6 md:gap-10'>
+                    {address.map((item, i) => (
+                        <div
+                            key={i}
+                            className='bg-[#0A1823] w-full h-full  md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'
+                            data-aos="fade-up" // AOS animation
+                            data-aos-duration={(i + 1) * 200} // Varying duration for each item
+                        >
+                            <span className="text-[#22AAD2] text-xl md:text-3xl">{item.icon}</span>
+                            <p className='text-white text-wrap text-[10px] md:text-base text-center flex '>
+                                {item.details}
+                            </p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

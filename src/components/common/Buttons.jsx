@@ -7,6 +7,8 @@ const Buttons = ({ content, className = '', data }) => {
     const handlePath = () => {
         if (data) { // Ensure data exists to navigate
             navigate(`/services/serviceDetails/${data}`);
+        } else if (content == "Get Started") {
+            navigate(`/contact`);
         }
     };
 
