@@ -1,7 +1,5 @@
 import React from 'react';
 import Buttons from './Buttons';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';
 import web from '../../assets/images/services/serviceItems/web.png';
 import mobile from '../../assets/images/services/serviceItems/mobile.png';
 import cloud from '../../assets/images/services/serviceItems/cloud.png';
@@ -15,7 +13,7 @@ import brain from '../../assets/images/services/serviceItems/brain.png';
 const Services = () => {
     const serviceItems = [
         { image: web, heading: 'Website Application Development', content: 'Our full-stack development services provide end-to-end solutions, combining front-end and back-end expertise for a future-proof digital presence.', data: 'Website' },
-        { image: mobile, heading: 'Mobile Application Development', content: 'Achieve Mobile Supremacy through Custom App Development Solutions that Combine User- Centric Design, Seamless Functionality, and Sustainable Business Growth', data: 'Mobile Application' },
+        { image: mobile, heading: 'Mobile Application Development', content: 'Achieve Mobile Supremacy through Custom App Development Solutions that Combine User-Centric Design, Seamless Functionality, and Sustainable Business Growth', data: 'Mobile Application' },
         { image: cloud, heading: 'Cloud Migration Services', content: 'Seamlessly transition your business to the cloud with expert migration strategies that minimize risk and maximize performance.', data: 'Cloud Migration' },
         { image: ai, heading: 'AI Development', content: 'Unlock Next-Gen Customer Experience with Expertly Crafted Conversational AI', data: 'AI Development' },
         { image: data, heading: 'Data Science Services', content: 'Accelerate Business Growth and Unlock New Revenue Streams with Our Expert Data Science Solutions', data: 'Data Science' },
@@ -37,13 +35,12 @@ const Services = () => {
             <div className='grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
                 {
                     serviceItems.map((item, i) => (
-                        <motion.div
+                        <div
                             key={i}
-                            variants={fadeIn("up", i * 0.1)}  // Staggering each item's animation with a slight delay
-                            initial="hidden"
-                            whileInView="show"
-                            viewport={{ once: true, amount: 0.3 }}
                             className='flex flex-col items-center justify-between bg-[#0A1828] rounded-xl p-5 w-full h-full max-w-[280px] text-center gap-3'
+                            data-aos="fade-up" // AOS animation
+                            data-aos-duration="1000" // Duration of the animation
+                            data-aos-delay={i * 100} // Staggering effect for delay
                         >
                             <div>
                                 <img src={item.image} className='object-contain w-10 h-10' alt={`${item.heading} icon`} loading='lazy' />
@@ -51,7 +48,7 @@ const Services = () => {
                             <h4 className='text-lg'>{item.heading}</h4>
                             <p className='text-sm tracking-tighter font-extralight'>{item.content}</p>
                             <Buttons content={'Learn more'} data={item.data} />
-                        </motion.div>
+                        </div>
                     ))
                 }
             </div>

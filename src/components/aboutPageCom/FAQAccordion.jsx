@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
 
 const FAQAccordion = () => {
     const [openIndex, setOpenIndex] = useState(null);
@@ -23,39 +25,49 @@ const FAQAccordion = () => {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    useEffect(() => {
+        AOS.init({
+            duration: 500, // Animation duration
+            easing: 'ease-in-out', // Easing function
+            once: true, // Whether animation should happen only once
+        });
+    }, []);
+
     return (
         <div className="flex items-center justify-center bg-inherit mb-6 md:mb-0">
             <div className='w-5/6 md:w-4/6 flex flex-col gap-5'>
                 <div className='flex flex-col gap-4 p-4'>
-                    <p className='text-[#22AAD2] text-start text-sm md:text-center md:text-lg '>― FAQ</p>
+                    <p className='text-[#22AAD2] text-start text-sm md:text-center md:text-lg'>― FAQ</p>
                     <h3 className='flex flex-col text-center text-xl md:text-4xl'>
-                        Frequently Asked Question
+                        Frequently Asked Questions
                     </h3>
                 </div>
                 {faqs.map((faq, index) => (
-                    <div key={index} className="flex flex-col gap-4 border-[#22AAD259] bg-[#0A1828] border-t-2  rounded-xl">
+                    <div
+                        key={index}
+                        className="flex flex-col gap-4 border-[#22AAD259] bg-[#0A1828] border-t-2 rounded-xl"
+                        data-aos="fade-up" // AOS animation for each FAQ
+                    >
                         <div
                             className="flex justify-between items-center py-4 cursor-pointer p-3"
                             onClick={() => toggleAccordion(index)}
                         >
-                            <h4 className='text-sm md:text-xl'> {faq.question}</h4>
+                            <h4 className='text-sm md:text-xl'>{faq.question}</h4>
                             {openIndex === index ? (
                                 <FaChevronUp className="text-xl text-gray-500" />
                             ) : (
                                 <FaChevronDown className="text-xl text-[#22AAD2]" />
                             )}
-
                         </div>
                         {openIndex === index && (
-                            <div className="p-2 text-[#B5B3B3] text-sm text-center pb-3">
+                            <div className="p-2 text-[#B5B3B3] text-sm text-center pb-3" data-aos="fade-in"> {/* AOS animation for answer */}
                                 {faq.answer}
                             </div>
                         )}
                     </div>
-                ))
-                }
+                ))}
             </div>
-        </div >
+        </div>
     );
 };
 

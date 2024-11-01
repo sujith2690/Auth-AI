@@ -21,49 +21,46 @@ import Marquee from "react-fast-marquee";
 
 const RunningBar = () => {
     const images = [
-        html,
-        css,
-        github,
-        reactimage,
-        express,
-        jwt,
-        postgresql,
-        npm,
-        mui,
-        redux,
-        node,
-        javascript,
-        tailwind,
-        mongodb,
-        bootstrap,
-        angular,
-        typeScript,
+        { src: html, alt: 'HTML5 Logo' },
+        { src: css, alt: 'CSS3 Logo' },
+        { src: github, alt: 'GitHub Logo' },
+        { src: reactimage, alt: 'React Logo' },
+        { src: express, alt: 'Express Logo' },
+        { src: jwt, alt: 'JWT Logo' },
+        { src: postgresql, alt: 'PostgreSQL Logo' },
+        { src: npm, alt: 'NPM Logo' },
+        { src: mui, alt: 'Material UI Logo' },
+        { src: redux, alt: 'Redux Logo' },
+        { src: node, alt: 'Node.js Logo' },
+        { src: javascript, alt: 'JavaScript Logo' },
+        { src: tailwind, alt: 'Tailwind CSS Logo' },
+        { src: mongodb, alt: 'MongoDB Logo' },
+        { src: bootstrap, alt: 'Bootstrap Logo' },
+        { src: angular, alt: 'Angular Logo' },
+        { src: typeScript, alt: 'TypeScript Logo' },
     ];
 
     return (
         <div className="flex bg-inherit items-center justify-center p-4">
-            <div className=' flex flex-col gap-2 md:gap-4 w-5/6'>
+            <div className='flex flex-col gap-2 md:gap-4 w-5/6'>
                 <Marquee pauseOnHover speed={50} direction='right' gradient={false}>
                     {images.map((item, i) => (
-                        <div key={i} className="flex items-center justify-center mx-4">
+                        <div key={i} className="flex items-center justify-center mx-4 transition-transform transform hover:scale-110">
                             <img
-                                src={item}
-                                alt={`tech-${i}`}
+                                src={item.src}
+                                alt={item.alt}
                                 className="h-10 w-10 md:h-20 md:w-20 object-contain"
                             />
                         </div>
                     ))}
                 </Marquee>
-                <div>
 
-                </div>
                 <Marquee pauseOnHover speed={50} direction="left" gradient={false}>
-
                     {images.map((item, i) => (
-                        <div key={i} className="flex items-center justify-center mx-4">
+                        <div key={i} className="flex items-center justify-center mx-4 transition-transform transform hover:scale-110">
                             <img
-                                src={item}
-                                alt={`tech-${i}`}
+                                src={item.src}
+                                alt={item.alt}
                                 className="h-10 w-10 md:h-20 md:w-20 object-contain"
                             />
                         </div>

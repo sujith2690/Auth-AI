@@ -1,6 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants';  // Assuming this is where fadeIn is located
+import { H4 } from './Typography';
 import image1 from '../../assets/images/homePage/Vector4.png';
 import image2 from '../../assets/images/homePage/Vector5.png';
 
@@ -40,12 +39,12 @@ const Value = () => {
                     </div>
                     <div className='flex flex-col gap-5'>
                         {integrity.map((item, i) => (
-                            <motion.div
+                            <div
                                 key={i}
-                                variants={fadeIn('right', i * 0.2)}
-                                initial="hidden"
-                                animate="show"
                                 className='flex gap-4 items-center'
+                                data-aos="fade-right" // AOS animation
+                                data-aos-duration="1000" // Duration of the animation
+                                data-aos-delay={i * 200} // Delay based on index
                             >
                                 <div className='w-20 h-20 rounded-full bg-gradient-to-r from-[#0788AE] to-[#22AAD2] flex items-center justify-center'>
                                     <img src={item.image} loading='lazy' alt={item.subHeading} />
@@ -54,25 +53,24 @@ const Value = () => {
                                     <h4 className='text-lg'>{item.subHeading}</h4>
                                     <p className='text-sm tracking-tighter font-extralight'>{item.content}</p>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
                 </div>
 
-                <motion.div
+                <div
                     className='bg-[#0f243c] w-5/6 md:w-2/6 rounded-2xl p-5 mt-3 md:mt-0 md:p-5'
-                    variants={fadeIn('up', 0.2)}
-                    initial="hidden"
-                    animate="show"
+                    data-aos="fade-up" // AOS animation
+                    data-aos-duration="1000" // Duration of the animation
                 >
                     <div className='flex flex-col gap-2 md:gap-5 md:p-5'>
                         {barData.map((item, i) => (
-                            <motion.div
+                            <div
                                 key={i}
                                 className='flex flex-col gap-2'
-                                variants={fadeIn('up', i * 0.2)}
-                                initial="hidden"
-                                animate="show"
+                                data-aos="fade-up" // AOS animation
+                                data-aos-duration="1000" // Duration of the animation
+                                data-aos-delay={i * 200} // Delay based on index
                             >
                                 <p className='flex items-center justify-between px-3'>
                                     {item.name} <span>{item.percentage}%</span>
@@ -83,10 +81,10 @@ const Value = () => {
                                         style={{ width: `${item.percentage}%` }}
                                     ></div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
             </div>
         </div>
     );

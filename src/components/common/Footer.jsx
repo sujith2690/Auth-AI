@@ -1,5 +1,6 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos'; // Import AOS
+import 'aos/dist/aos.css'; // Import AOS styles
 import { MdNavigateNext } from "react-icons/md";
 import { IoLocationOutline, IoMailOutline } from 'react-icons/io5';
 import { CiPhone } from 'react-icons/ci';
@@ -23,22 +24,33 @@ const contact = [
         content: '+91 9620655510 / +91 9845120432',
     },
 ];
-const socialIcons = [<FaFacebookF />, <FaInstagram />, <FaYoutube />, <FaTwitter />]
+const socialIcons = [<FaFacebookF />, <FaInstagram />, <FaYoutube />, <FaTwitter />];
 
 const Footer = () => {
     const { pathname } = useLocation();
     const path = pathname.split('/').filter(Boolean).pop();
-    console.log(path, '-----------path')
+    console.log(path, '-----------path');
+
+    // Initialize AOS
+    useEffect(() => {
+        AOS.init();
+    }, []);
 
     return (
-        <footer className='bg-inherit '>
+        <footer className='bg-inherit'>
             <div className='flex items-center justify-center'>
-                <div className=" bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 sm:grid-cols-4 gap-3 w-5/6 ">
-                    <div className='flex items-center justify-center   p-2'>
-                        <div className=' flex flex-col gap-2  '>
+                <div
+                    className="bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 sm:grid-cols-4 gap-3 w-5/6"
+                    data-aos="fade-up" // AOS animation for the whole footer
+                    data-aos-duration="500" // Duration of the animation
+                >
+                    <div className='flex items-center justify-center p-2'>
+                        <div className='flex flex-col gap-2'>
                             <p className='flex text-center text-sm'>
                                 {
-                                    path == 'contact' ? 'Ready to embark on your AI journey? Reach out to us today!' : "Our innovative solutions are designed not just to meet the demands of today but to anticipate the challenges of tomorrow, ensuring that your business stays ahead of the curve."
+                                    path === 'contact' 
+                                    ? 'Ready to embark on your AI journey? Reach out to us today!' 
+                                    : "Our innovative solutions are designed not just to meet the demands of today but to anticipate the challenges of tomorrow, ensuring that your business stays ahead of the curve."
                                 }
                             </p>
                             <div className='flex items-center justify-center gap-4'>
@@ -51,12 +63,12 @@ const Footer = () => {
                         </div>
                     </div>
                     {/* Company Section */}
-                    <div className=''>
+                    <div data-aos="fade-up" data-aos-delay="100">
                         <h3 className="text-lg font-semibold mb-4">Company</h3>
                         <ul className="space-y-2">
                             {company.map((item, index) => (
                                 <li key={index} className="flex items-center">
-                                    <span className="mr-2 text-xl text-[#22AAD2] "><MdNavigateNext /></span>
+                                    <span className="mr-2 text-xl text-[#22AAD2]"><MdNavigateNext /></span>
                                     <span className='text-[#B5B3B3] text-sm'>{item}</span>
                                 </li>
                             ))}
@@ -64,12 +76,12 @@ const Footer = () => {
                     </div>
 
                     {/* Support Section */}
-                    <div className=''>
+                    <div data-aos="fade-up" data-aos-delay="200">
                         <h3 className="text-lg font-semibold mb-4">Support</h3>
                         <ul className="space-y-2">
                             {support.map((item, index) => (
                                 <li key={index} className="flex items-center">
-                                    <span className="mr-2 text-xl text-[#22AAD2] "><MdNavigateNext /></span>
+                                    <span className="mr-2 text-xl text-[#22AAD2]"><MdNavigateNext /></span>
                                     <span className='text-[#B5B3B3] text-sm'>{item}</span>
                                 </li>
                             ))}
@@ -77,7 +89,7 @@ const Footer = () => {
                     </div>
 
                     {/* Contact Section */}
-                    <div>
+                    <div data-aos="fade-up" data-aos-delay="300">
                         <h3 className="text-lg font-semibold mb-4">Contact</h3>
                         <ul className="space-y-4">
                             {contact.map((item, index) => (
@@ -90,9 +102,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex items-center justify-center bg-[#0D151F] p-3 '>
+            <div className='flex items-center justify-center bg-[#0D151F] p-3'>
                 <div>
-                    <p className='text-sm md:text-sm text-[#E0E2E259] text-center'>Copyright © 2024 Haidezign. All Right Reserved.</p>
+                    <p className='text-sm md:text-sm text-[#E0E2E259] text-center'>Copyright © 2024 Haidezign. All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

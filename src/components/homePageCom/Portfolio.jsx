@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../../variants'; // Assuming fadeIn is defined in this path
 import Buttons from '../common/Buttons';
 import image1 from '../../assets/images/portfolio/Image1.png';
 import image2 from '../../assets/images/portfolio/Image2.png';
@@ -25,12 +23,12 @@ const Portfolio = () => {
             </div>
             <div className='grid grid-cols-2 gap-4'>
                 {portFolioContent.map((item, i) => (
-                    <motion.div
+                    <div
                         key={i}
-                        variants={fadeIn('up', i * 0.2)}
-                        initial="hidden"
-                        animate="show"
                         className={`relative h-full overflow-hidden rounded-2xl ${i % 2 === 1 ? 'mt-3' : ''}`}
+                        data-aos="fade-up" // AOS animation
+                        data-aos-duration="1000" // Duration of the animation
+                        data-aos-delay={i * 200} // Delay based on index
                     >
                         <img src={item.image} alt={item.title} loading='lazy' className='md:w-[400px] md:h-[500px] object-cover' />
                         <div className='absolute inset-0 bg-gradient-to-t from-[#132030] to-transparent'>
@@ -42,7 +40,7 @@ const Portfolio = () => {
                                 </div>
                             </div>
                         </div>
-                    </motion.div>
+                    </div>
                 ))}
             </div>
         </div>
