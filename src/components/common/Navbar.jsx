@@ -55,11 +55,11 @@ const Navbar = () => {
                                 {item.name} {item.dropDown && <FaAngleDown />}
                             </Link>
                             {item.dropDown && isDropdownOpen && (
-                                <div className="absolute top-full left-0 mt-1 w-48 bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-md shadow-lg z-50 ">
-                                    <Link onClick={() => setIsDropdownOpen(false)} to="/services/mobile_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200  hover:rounded">
+                                <div className="absolute top-full left-0 mt-1 w-48 bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-md shadow-lg z-50">
+                                    <Link onClick={() => setIsDropdownOpen(false)} to="/mobile_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
                                         Mobile Application
                                     </Link>
-                                    <Link onClick={() => setIsDropdownOpen(false)} to="/services/web_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
+                                    <Link onClick={() => setIsDropdownOpen(false)} to="/web_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
                                         Web Application
                                     </Link>
                                     <Link onClick={() => setIsDropdownOpen(false)} to="/services" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
@@ -87,19 +87,40 @@ const Navbar = () => {
             {isMenuOpen && (
                 <div className="flex flex-col items-center mb-2 md:mb-0 text-white w-full p-2 md:py-4 md:px-6 space-y-2 lg:hidden">
                     {navigation.map((item) => (
-                        <Link
-                            key={item.name}
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                            to={item.href}
-                            className={classNames(
-                                item.href === location.pathname
-                                    ? 'text-white cursor-pointer'
-                                    : 'text-[#B5B3B3] cursor-pointer hover:text-white transition',
-                                'rounded-md px-3 py-2 text-sm font-medium flex gap-1'
+                        <div key={item.name} className="relative w-full text-center">
+                            <Link
+                                onClick={() => {
+                                    if (item.dropDown) {
+                                        setIsDropdownOpen(!isDropdownOpen);
+                                    } else {
+                                        setIsMenuOpen(false);
+                                        setIsDropdownOpen(false);
+                                    }
+                                }}
+                                to={item.dropDown ? "#" : item.href}
+                                className={classNames(
+                                    item.href === location.pathname
+                                        ? 'text-white cursor-pointer'
+                                        : 'text-[#B5B3B3] cursor-pointer hover:text-white transition',
+                                    'rounded-md px-3 py-2 text-sm font-medium flex gap-1 justify-center'
+                                )}
+                            >
+                                {item.name} {item.dropDown && <FaAngleDown />}
+                            </Link>
+                            {item.dropDown && isDropdownOpen && (
+                                <div className="mt-1 w-full bg-gradient-to-r from-[#0788AE] to-[#22AAD2] rounded-md shadow-lg">
+                                    <Link onClick={() => setIsMenuOpen(false)} to="/mobile_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200">
+                                        Mobile Application
+                                    </Link>
+                                    <Link onClick={() => setIsMenuOpen(false)} to="/web_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200">
+                                        Web Application
+                                    </Link>
+                                    <Link onClick={() => setIsMenuOpen(false)} to="/services" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200">
+                                        Service Details
+                                    </Link>
+                                </div>
                             )}
-                        >
-                            {item.name} {item.dropDown && <FaAngleDown />}
-                        </Link>
+                        </div>
                     ))}
                     <Buttons content={'Get Started'} />
                 </div>

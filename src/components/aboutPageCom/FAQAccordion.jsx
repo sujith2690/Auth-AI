@@ -24,7 +24,7 @@ const FAQAccordion = () => {
     };
 
     return (
-        <div className="flex items-center justify-center bg-inherit">
+        <div className="flex items-center justify-center bg-inherit mb-6 md:mb-0">
             <div className='w-5/6 md:w-4/6 flex flex-col gap-5'>
                 <div className='flex flex-col gap-4 p-4'>
                     <p className='text-[#22AAD2] text-start text-sm md:text-center md:text-lg '>― FAQ</p>
