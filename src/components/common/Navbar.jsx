@@ -62,6 +62,9 @@ const Navbar = () => {
                                     <Link onClick={() => setIsDropdownOpen(false)} to="/services/web_application" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
                                         Web Application
                                     </Link>
+                                    <Link onClick={() => setIsDropdownOpen(false)} to="/services" className="block px-4 py-2 text-sm text-white hover:text-black hover:bg-gray-200 hover:rounded">
+                                        Service Details
+                                    </Link>
                                 </div>
                             )}
                         </div>
