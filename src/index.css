@@ -7,6 +7,7 @@
 
 @layer base {
   html {
+    overflow-x: hidden;
     color: #F2F2F2;
     font-family: 'Heebo', sans-serif;
   }

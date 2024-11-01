@@ -16,7 +16,12 @@ const company = [
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Article & News', path: '/articles' },
 ];
-const support = ['Help Center', 'FAQ', 'Privacy Policy', 'Terms and Condition'];
+const support = [
+    { name: 'Help Center', path: '/help-center' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Privacy Policy', path: '/privacy-policy' },
+    { name: 'Terms and Condition', path: '/terms-and-conditions' },
+];
 const contact = [
     {
         icon: <IoLocationOutline />,
@@ -91,7 +96,9 @@ const Footer = () => {
                             {support.map((item, index) => (
                                 <li key={index} className="flex items-center">
                                     <span className="mr-2 text-xl text-[#22AAD2]"><MdNavigateNext /></span>
-                                    <span className='text-[#B5B3B3] text-sm'>{item}</span>
+                                    <Link to={item.path} className='text-[#B5B3B3] text-sm hover:text-[#22AAD2] transition duration-300'>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>
