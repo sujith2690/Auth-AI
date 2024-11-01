@@ -4,6 +4,7 @@ import { lazy, Suspense } from 'react'
 import Navbar from './components/common/Navbar'
 import Loading from './components/pages/Loading'
 import { Route, Routes } from 'react-router-dom'
+import ErrorPage from './components/pages/ErrorPage'
 
 
 const App = () => {
@@ -31,7 +32,8 @@ const App = () => {
             <Route path='/faq' element={<Faq />} />
             <Route path='/mobile_application' element={<Mobile />} />
             <Route path='/web_application' element={<Web />} />
-            <Route path='/loading' element={<Loading />} />
+            <Route path='*' element={<ErrorPage />} /> {/* Add this line */}
+            {/* <Route path='/loading' element={<Loading />} /> */}
           </Routes>
         </Suspense>
       </div>

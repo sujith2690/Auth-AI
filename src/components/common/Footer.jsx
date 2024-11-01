@@ -7,8 +7,15 @@ import { CiPhone } from 'react-icons/ci';
 import { FaFacebookF, FaYoutube, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const company = ['Homepage', 'About Us', 'Our Team', 'Portfolio', 'Article & News'];
+const company = [
+    { name: 'Homepage', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Team', path: '/our-team' },
+    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Article & News', path: '/articles' },
+];
 const support = ['Help Center', 'FAQ', 'Privacy Policy', 'Terms and Condition'];
 const contact = [
     {
@@ -48,9 +55,9 @@ const Footer = () => {
                         <div className='flex flex-col gap-2'>
                             <p className='flex text-center text-sm'>
                                 {
-                                    path === 'contact' 
-                                    ? 'Ready to embark on your AI journey? Reach out to us today!' 
-                                    : "Our innovative solutions are designed not just to meet the demands of today but to anticipate the challenges of tomorrow, ensuring that your business stays ahead of the curve."
+                                    path === 'contact'
+                                        ? 'Ready to embark on your AI journey? Reach out to us today!'
+                                        : "Our innovative solutions are designed not just to meet the demands of today but to anticipate the challenges of tomorrow, ensuring that your business stays ahead of the curve."
                                 }
                             </p>
                             <div className='flex items-center justify-center gap-4'>
@@ -69,7 +76,9 @@ const Footer = () => {
                             {company.map((item, index) => (
                                 <li key={index} className="flex items-center">
                                     <span className="mr-2 text-xl text-[#22AAD2]"><MdNavigateNext /></span>
-                                    <span className='text-[#B5B3B3] text-sm'>{item}</span>
+                                    <Link to={item.path} className='text-[#B5B3B3] text-sm hover:text-[#22AAD2] transition duration-300'>
+                                        {item.name}
+                                    </Link>
                                 </li>
                             ))}
                         </ul>

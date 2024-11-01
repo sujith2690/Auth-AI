@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
-import { Link, useLocation } from 'react-router-dom';
+    import { Link, useLocation } from 'react-router-dom';
 import Buttons from "./Buttons";
 import logo from '../../assets/images/logo.png';
 import { GiHamburgerMenu } from "react-icons/gi";
