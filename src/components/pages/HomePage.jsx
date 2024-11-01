@@ -21,7 +21,7 @@ const HomePage = () => {
             <Transform />
             <Services />
             <Clients />
-            <Value />
+            <Value /> 
             <Portfolio />
             <Something />
             <Testimonials /> 

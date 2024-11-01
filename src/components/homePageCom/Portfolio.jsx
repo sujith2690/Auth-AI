@@ -48,7 +48,7 @@ const Portfolio = () => {
                                     <h5 className='text-lg md:text-xl '>{item.title}</h5>
                                     <p className='text-[#E3E3E3] text-sm lg:text-'>{item.description}</p>
                                     <div className='mt-2'>
-                                        <Buttons content={'Learn more'} className='w-fit px-4 py-2 text-sm md:text-base lg:text-lg' />
+                                        <Buttons content={'Learn more'} className='w-fit px-3 md:px-4 py-1 md:py-2 text-sm md:text-base lg:text-lg' />
                                     </div>
                                 </div>
                             </div>

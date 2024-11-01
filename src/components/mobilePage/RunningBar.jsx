@@ -42,14 +42,14 @@ const RunningBar = () => {
 
     return (
         <div className="flex bg-inherit items-center justify-center p-4">
-            <div className=' flex flex-col w-5/6'>
+            <div className=' flex flex-col gap-2 md:gap-4 w-5/6'>
                 <Marquee pauseOnHover speed={50} direction='right' gradient={false}>
                     {images.map((item, i) => (
                         <div key={i} className="flex items-center justify-center mx-4">
                             <img
                                 src={item}
                                 alt={`tech-${i}`}
-                                className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                                className="h-10 w-10 md:h-20 md:w-20 object-contain"
                             />
                         </div>
                     ))}
@@ -64,7 +64,7 @@ const RunningBar = () => {
                             <img
                                 src={item}
                                 alt={`tech-${i}`}
-                                className="h-16 w-16 md:h-20 md:w-20 object-contain"
+                                className="h-10 w-10 md:h-20 md:w-20 object-contain"
                             />
                         </div>
                     ))}

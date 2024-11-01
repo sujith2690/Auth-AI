@@ -5,6 +5,7 @@ import RunningBar from '../mobilePage/RunningBar'
 import Footer from '../common/Footer'
 import Future from '../mobilePage/Future'
 import Something from '../common/Something'
+import FormSubmission from '../contactPage/FormSubmission'
 
 const MobileApplication = () => {
     const content = "The process of creating software applications designed to run on mobile devices such as smartphones and tablets. These apps can be native (built specifically for a platform like iOS or Android), hybrid (a mix of native and web elements), or web-based, accessible through a mobile browser."
@@ -15,6 +16,7 @@ const MobileApplication = () => {
             <Something/>
             <RunningBar/>
             <Future/>
+            <FormSubmission/>
             <Footer/>
         </>
     )

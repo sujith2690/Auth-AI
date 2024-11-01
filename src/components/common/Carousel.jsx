@@ -51,12 +51,14 @@ const data = [
 
 const Carousel = () => {
     const [visibleData, setVisibleData] = useState([]);
+    const [smallData, setSmallData] = useState([])
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isAnimating, setIsAnimating] = useState(false);
 
     useEffect(() => {
         // Initialize the first three items
         setVisibleData(data.slice(0, 3));
+        setSmallData(data.slice(0, 1))
     }, []);
 
     useEffect(() => {
@@ -74,6 +76,7 @@ const Carousel = () => {
                 ...data.slice(newIndex, newIndex + 3),
                 ...data.slice(0, Math.max(0, newIndex + 3 - data.length))
             ];
+            setSmallData(newData.slice(0, 3))
             setVisibleData(newData.slice(0, 3));
             return newIndex;
         });
@@ -89,42 +92,76 @@ const Carousel = () => {
                 ...data.slice(0, Math.max(0, newIndex + 3 - data.length))
             ];
             setVisibleData(newData.slice(0, 3));
+            setSmallData(newData.slice(0, 1));
             return newIndex;
         });
     };
 
     return (
-        <div>
-            <div className='flex items-center justify-between gap-10 p-2'>
-                <button onClick={handlePrevious} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
-                    <img src={prev} alt="Previous" loading='lazy' />
-                </button>
-                <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6'>
-                    {visibleData.map((item, i) => (
-                        <div key={i} className={`bg-[#0A1828] h-full md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
-                            <p className='italic text-[#B5B3B3] hidden md:flex text-sm '>{item.quote}</p>
-                            <img src={item.image} alt={item.name} loading='lazy' />
-                            <p className='text-white text-sm lg:text-base'>{item.name}</p>
-                            <p className='text-[#22AAD2] text-sm lg:text-base'>{item.position}</p>
+        <>
+            <div className='hidden md:flex'>
+                <div>
+                    <div className='flex items-center justify-between gap-10 p-2'>
+                        <button onClick={handlePrevious} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Previous" loading='lazy' />
+                        </button>
+                        <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6'>
+                            {visibleData.map((item, i) => (
+                                <div key={i} className={`bg-[#0A1828] h-full md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                                    <p className='italic text-[#B5B3B3] hidden md:flex text-sm '>{item.quote}</p>
+                                    <img src={item.image} alt={item.name} loading='lazy' />
+                                    <p className='text-white text-sm lg:text-base'>{item.name}</p>
+                                    <p className='text-[#22AAD2] text-sm lg:text-base'>{item.position}</p>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                        <button onClick={handleNext} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rotate-180 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Next" loading='lazy' />
+                        </button>
+                    </div>
+                    <div className='flex items-center justify-center gap-5 p-5 mt-5'>
+                        <button onClick={handlePrevious} className='flex lg:hidden items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-14 lg:h-14 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Previous" loading='lazy' />
+                        </button>
+                        {data.map((_, i) => (
+                            <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
+                        ))}
+                        <button onClick={handleNext} className='flex lg:hidden  items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-16 lg:h-16 rotate-180 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Next" loading='lazy' />
+                        </button>
+                    </div>
                 </div>
-                <button onClick={handleNext} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rotate-180 rounded-full border-2 border-white'>
-                    <img src={prev} alt="Next" loading='lazy' />
-                </button>
             </div>
-            <div className='flex items-center justify-center gap-5 p-5 mt-5'>
-                <button onClick={handlePrevious} className='flex lg:hidden items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-14 lg:h-14 rounded-full border-2 border-white'>
-                    <img src={prev} alt="Previous" loading='lazy' />
-                </button>
-                {data.map((_, i) => (
-                    <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
-                ))}
-                <button onClick={handleNext} className='flex lg:hidden  items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-16 lg:h-16 rotate-180 rounded-full border-2 border-white'>
-                    <img src={prev} alt="Next" loading='lazy' />
-                </button>
+            <div>
+                <div className='md:hidden'>
+                    <div className='flex items-center justify-between gap-10 p-2'>
+                        <button onClick={handlePrevious} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Previous" loading='lazy' />
+                        </button>
+                        <div className='grid place-items-center  gap-5 md:gap-6'>
+                            {smallData.map((item, i) => (
+                                <div key={i} className={`bg-[#0A1828] h-full md:h-50 w-56 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                                    <p className='italic text-[#B5B3B3]  md:flex text-sm '>{item.quote}</p>
+                                    <img src={item.image} alt={item.name} loading='lazy' />
+                                    <p className='text-white text-sm lg:text-base'>{item.name}</p>
+                                    <p className='text-[#22AAD2] text-sm lg:text-base'>{item.position}</p>
+                                </div>
+                            ))}
+                        </div>
+                        <button onClick={handleNext} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rotate-180 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Next" loading='lazy' />
+                        </button>
+                    </div>
+                    <div className='flex items-center justify-center gap-5 p-5 mt-5'>
+                        {data.map((_, i) => (
+                            <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
+
+
+        </>
     );
 };
 

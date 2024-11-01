@@ -74,7 +74,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="lg:hidden flex items-center md:mr-16">
+                <div className="lg:hidden flex items-center md:mr-16 p-5">
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         className="text-2xl focus:outline-none text-white"

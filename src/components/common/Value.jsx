@@ -37,8 +37,8 @@ const Value = () => {
         <>
             <div className='flex flex-col items-center justify-center bg-inherit md:p-5'>
                 <div>
-                    <div className='flex flex-col md:flex-row items-center justify-center'>
-                        <div className='w-5/6 md:w-1/2'>
+                    <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+                        <div className='w-5/6 md:w-1/2 space-y-3 md:space-y-0'>
                             <div className='p-2  flex flex-col gap-3'>
                                 <p className='text-[#22AAD2] text-start text-sm md:text-lg '>― Our Value</p>
                                 <h3 className='flex flex-col text-2xl md:text-3xl lg:text-5xl'>
