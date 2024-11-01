@@ -3,12 +3,17 @@ import image from '../../assets/images/Background Image3.png';
 import image1 from '../../assets/images/Background Image 1.png';
 import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
+import { useNavigate } from 'react-router-dom';
 
 const Something = () => {
+    const navigate = useNavigate()
     useEffect(() => {
         AOS.init(); // Initialize AOS on component mount
     }, []);
 
+    const handleNavigate = () => {
+        navigate(`/contact`);
+    }
     return (
         <div className='bg-inherit  py-12 md:mt-0 md:p-10'>
             <div className='relative flex items-center justify-center'>
@@ -46,6 +51,7 @@ const Something = () => {
                             data-aos="fade-up" // AOS animation for the button
                             data-aos-duration="800"
                             data-aos-delay="400" // Delay for this element
+                            onClick={handleNavigate}
                         >
                             Get Started
                         </button>
