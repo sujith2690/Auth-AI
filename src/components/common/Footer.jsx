@@ -17,9 +17,9 @@ const company = [
     { name: 'Article & News', path: '/articles' },
 ];
 const support = [
-    { name: 'Help Center', path: '/help-center' },
+    { name: 'Help Center', path: '/contact' },
     { name: 'FAQ', path: '/faq' },
-    { name: 'Privacy Policy', path: '/privacy-policy' },
+    { name: 'Privacy Policy', path: '/contact' },
     { name: 'Terms and Condition', path: '/terms-and-conditions' },
 ];
 const contact = [
