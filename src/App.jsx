@@ -29,8 +29,8 @@ const App = () => {
             <Route path='/services' element={<Services />} />
             <Route path="/services/serviceDetails/:serviceName" element={<ServiceDetails />} />
             <Route path='/faq' element={<Faq />} />
-            <Route path='/mobile' element={<Mobile />} />
-            <Route path='/web_application' element={<Web />} />
+            <Route path='/services/mobile_application' element={<Mobile />} />
+            <Route path='/services/web_application' element={<Web />} />
             <Route path='/loading' element={<Loading />} />
           </Routes>
         </Suspense>
