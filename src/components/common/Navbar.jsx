@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaAngleDown } from "react-icons/fa";
-    import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Buttons from "./Buttons";
 import logo from '../../assets/images/logo.png';
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -31,7 +31,9 @@ const Navbar = () => {
         <section className="bg-transparent shadow-sm">
             <div className="flex items-center justify-between w-full p-2 md:p-4 lg:px-10">
                 <div>
-                    <img src={logo} loading="lazy" alt="Logo" />
+                    <Link to="/"> {/* Link to home page */}
+                        <img src={logo} loading="lazy" alt="Logo" />
+                    </Link>
                 </div>
                 <div className="hidden lg:flex items-center justify-end gap-1 md:gap-6 md:w-1/2 whitespace-nowrap">
                     {navigation.map((item) => (
