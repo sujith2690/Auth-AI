@@ -31,11 +31,12 @@ const Contact = () => {
     return (
         <div className='relative flex items-center justify-center'>
             <div>
-                <div className='grid grid-cols-3 items-center justify-center p-5  gap-6 md:gap-10'>
+                {/* <div className='grid grid-cols-3 items-center justify-center p-5  gap-6 md:gap-10'> */}
+                <div className='flex flex-wrap items-center justify-center p-2 md:p-5  gap-6 md:gap-10'>
                     {address.map((item, i) => (
                         <div
                             key={i}
-                            className='bg-[#0A1823] w-full h-full  md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'
+                            className='bg-[#0A1823] w-36 h-20 md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'
                             data-aos="fade-up" // AOS animation
                             data-aos-duration={(i + 1) * 200} // Varying duration for each item
                         >
