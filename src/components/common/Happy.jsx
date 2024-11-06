@@ -17,15 +17,16 @@ const Happy = () => {
     }, []);
 
     return (
-        <div className='relative'>
-            <div className='absolute w-full h-full text-gray-200 max-h-[250px] gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
+        <div className='relative bg-inherit py-4'>
+            <div className='absolute w-full h-full text-gray-200 max-h-[250px] gap-3 md:gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
                 <h2 
                     className='text-sm md:text-2xl lg:text-5xl text-center'
                     data-aos="fade-up" // AOS animation
                 >
                     Join Our <span className='text-[#22AAD2]'>1500+</span> Happy Customers
                 </h2>
-                <div className='grid place-items-center grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-10 p-2'>
+                {/* <div className='grid place-items-center grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5 md:gap-10 p-2'> */}
+                <div className='flex flex-wrap justify-around  gap-4 md:gap-10 p-2'>
                     {customerLogos.map((logo, index) => (
                         <div 
                             className='flex items-center justify-center'

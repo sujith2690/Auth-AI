@@ -15,13 +15,13 @@ const Something = () => {
         navigate(`/contact`);
     }
     return (
-        <div className='bg-inherit  py-12 md:mt-0 md:p-10'>
+        <div className='bg-inherit py-24 md:mt-0 md:p-8 lg:p-12'>
             <div className='relative flex items-center justify-center'>
                 <img className='md:w-5/6 md:max-h-[500px] object-cover' src={image} alt="Background" loading='lazy' />
                 <div className='absolute inset-0 bg-[#060F1AE5] opacity-90'></div>
                 <div className='absolute inset-0 flex flex-col items-center justify-center'>
                     <div
-                        className='rounded-3xl bg-gradient-to-r from-[#0788AEE5] to-[#22AAD2E5] md:gap-6 flex flex-col items-center justify-center relative p-1 w-5/6 md:p-5'
+                        className='rounded-3xl bg-gradient-to-r from-[#0788AEE5] to-[#22AAD2E5] gap-2 md:gap-6 flex flex-col items-center justify-center relative p-1 w-5/6 md:p-5'
                         data-aos="fade-up" // AOS animation for the container
                         data-aos-duration="1000" // Duration of the animation
                     >
@@ -32,7 +32,7 @@ const Something = () => {
                             alt="Overlay Image"
                         />
                         <h1
-                            className='text-lg md:text-4xl text-white font-extrabold lg:text-6xl flex flex-col text-center items-center justify-center p-5 z-40'
+                            className='text-lg md:text-2xl text-white font-extrabold lg:text-6xl flex flex-col text-center items-center justify-center p-2 z-40'
                             data-aos="zoom-in" // AOS animation for the heading
                             data-aos-duration="800"
                         >

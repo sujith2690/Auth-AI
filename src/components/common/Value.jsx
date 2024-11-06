@@ -46,10 +46,13 @@ const Value = () => {
                                 data-aos-duration="1000" // Duration of the animation
                                 data-aos-delay={i * 200} // Delay based on index
                             >
-                                <div className='w-20 h-20 rounded-full bg-gradient-to-r from-[#0788AE] to-[#22AAD2] flex items-center justify-center'>
-                                    <img src={item.image} loading='lazy' alt={item.subHeading} />
-                                </div>
+                                {/* <div className='w-20 h-20 rounded-full bg-gradient-to-r from-[#0788AE] to-[#22AAD2] flex items-center justify-center'> */}
                                 <div>
+                                    <div className='w-20 h-20 rounded-full bg-gradient-to-r from-[#0788AE] to-[#22AAD2] flex items-center justify-center'>
+                                        <img src={item.image} loading='lazy' alt={item.subHeading} />
+                                    </div>
+                                </div>
+                                <div className=''>
                                     <h4 className='text-lg'>{item.subHeading}</h4>
                                     <p className='text-sm tracking-tighter font-extralight'>{item.content}</p>
                                 </div>

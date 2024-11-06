@@ -9,7 +9,7 @@ const Testimonials = () => {
     }, []);
 
     return (
-        <div className='flex flex-col items-center justify-center p-5 overflow-auto bg-inherit'>
+        <div className='flex flex-col items-center justify-center p-1 md:p-5 overflow-auto bg-inherit'>
             <div className='p-5 flex flex-col gap-3'>
                 <div
                     data-aos="fade-up" // AOS animation for the subtitle

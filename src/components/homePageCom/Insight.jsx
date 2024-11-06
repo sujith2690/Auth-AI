@@ -43,7 +43,8 @@ const Insight = () => {
                     <h2 className='text-lg md:text-4xl'>Explore the Edge of Innovation</h2>
                 </div>
                 <div>
-                    <div className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-5 p-5'>
+                    {/* <div className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-5 p-5'> */}
+                    <div className='grid place-items-center grid-cols-1 md:grid-cols-3 gap-5 p-5'>
                         {content.map((item, i) => (
                             <div
                                 key={i}
