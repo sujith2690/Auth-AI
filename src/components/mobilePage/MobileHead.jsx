@@ -17,7 +17,7 @@ const MobileHead = () => {
     }, []);
 
     return (
-        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]">
+        <div className="flex justify-center items-center min-h-[150px] py-8 mt-5 bg-[#060F1A]">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
                 <div className='p-5'>
                     <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 md:p-6">

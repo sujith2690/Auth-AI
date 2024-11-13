@@ -13,12 +13,12 @@ const CommonHero = ({ heading, content }) => {
     }, []);
 
     return (
-        <div className='relative'>
+        <div className='relative py-6'>
             <div className='absolute w-full h-full text-gray-200 max-h-[300px] gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
                 <div className='flex items-center justify-center'>
-                    <div className='p-1 md:w-2/3 flex flex-col items-center justify-center gap-2'>
+                    <div className='w-5/6 lg:w-4/6 flex flex-col items-center justify-center gap-2'>
                         <h1 
-                            className="text-2xl md:text-5xl lg:text-7xl text-center whitespace-nowrap mt-5"
+                            className="text-2xl md:text-5xl lg:text-7xl text-center whitespace-nowrap mt-5 text-wrap"
                             data-aos="fade-up" // AOS animation
                         >
                             {heading}

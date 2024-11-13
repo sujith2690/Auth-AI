@@ -7,7 +7,7 @@ const WebHead = () => {
     const content2 = "Technological advancements, such as the adoption of responsive web design, JavaScript frameworks, and progressive web apps (PWAs), are shaping the future of web development. These innovations ensure seamless user experiences across devices, making web applications more interactive and dynamic. As more businesses recognize the importance of a robust online presence, the demand for skilled web developers continues to rise, making this an exciting and rapidly evolving field.";
 
     return (
-        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]" data-aos="fade-up">
+        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A] py-8 mt-5" data-aos="fade-up">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
                 <div className='p-5'>
                     <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 md:p-6">
