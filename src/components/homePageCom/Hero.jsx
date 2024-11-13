@@ -6,9 +6,9 @@ import image from '../../assets/images/homePage/Background Image3.png';
 const Hero = () => {
     return (
         <div>
-            <div className='relative mt-10'>
+            <div className='relative mt-20'>
                 <div
-                    className="absolute w-full h-full text-gray-200 max-h-[500px] gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10"
+                    className="absolute w-full h-full text-gray-200 max-h-[500px] gap-3 md:gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10"
                     data-aos="fade-in" // AOS animation
                     data-aos-duration="1000" // Animation duration
                     data-aos-delay="200" // Delay before animation starts

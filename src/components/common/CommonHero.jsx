@@ -16,9 +16,9 @@ const CommonHero = ({ heading, content }) => {
         <div className='relative'>
             <div className='absolute w-full h-full text-gray-200 max-h-[300px] gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
                 <div className='flex items-center justify-center'>
-                    <div className='w-5/6 md:w-1/2 flex flex-col items-center justify-center gap-2'>
+                    <div className='p-1 md:w-2/3 flex flex-col items-center justify-center gap-2'>
                         <h1 
-                            className="text-2xl md:text-5xl lg:text-7xl text-center whitespace-nowrap"
+                            className="text-2xl md:text-5xl lg:text-7xl text-center whitespace-nowrap mt-5"
                             data-aos="fade-up" // AOS animation
                         >
                             {heading}

@@ -29,7 +29,7 @@ const Contact = () => {
     ];
 
     return (
-        <div className='relative flex items-center justify-center'>
+        <div className='relative bg-inherit flex items-center justify-center'>
             <div>
                 {/* <div className='grid grid-cols-3 items-center justify-center p-5  gap-6 md:gap-10'> */}
                 <div className='flex flex-wrap items-center justify-center p-2 md:p-5  gap-6 md:gap-10'>

@@ -87,7 +87,7 @@ const Navbar = () => {
             </div>
 
             {isMenuOpen && (
-                <div className="flex flex-col items-center mb-2 md:mb-0 text-white w-full p-2 md:py-4 md:px-6 space-y-2 lg:hidden">
+                <div className="flex flex-col items-center mb-2 md:mb-0 bg-red-600 text-white w-full p-2 md:py-4 md:px-6 space-y-2 lg:hidden">
                     {navigation.map((item) => (
                         <div key={item.name} className="relative w-full text-center">
                             <Link

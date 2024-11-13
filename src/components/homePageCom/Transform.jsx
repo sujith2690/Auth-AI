@@ -6,7 +6,7 @@ const Transform = () => {
     return (
         <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
-                <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 p-6">
+                <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 p-2 md:p-6">
                     <div
                         className="flex w-full"
                         data-aos="fade-left" // AOS animation
@@ -14,7 +14,7 @@ const Transform = () => {
                     >
                         <img
                             src={image}
-                            className="w-full h-auto object-cover md:h-full md:w-full"
+                            className="w-full h-auto object-cover rounded-3xl md:h-full md:w-full"
                             alt="home2.png"
                             loading="lazy"
                         />

@@ -15,7 +15,7 @@ const Something = () => {
         navigate(`/contact`);
     }
     return (
-        <div className='bg-inherit py-24 md:mt-0 md:p-8 lg:p-12'>
+        <div className='bg-inherit py-24 md:p-8 lg:p-12'>
             <div className='relative flex items-center justify-center'>
                 <img className='md:w-5/6 md:max-h-[500px] object-cover' src={image} alt="Background" loading='lazy' />
                 <div className='absolute inset-0 bg-[#060F1AE5] opacity-90'></div>
@@ -39,7 +39,7 @@ const Something = () => {
                             Let's Build Something Amazing <span>Together! Connect with Us Today!</span>
                         </h1>
                         <p
-                            className='text-[#E3E3E3] text-sm text-center flex flex-col md:flex-row mb-2 md:w-1/2 z-40'
+                            className='text-[#E3E3E3] text-sm text-center flex flex-col md:flex-row mb-2 lg:w-1/2 z-40'
                             data-aos="fade-up" // AOS animation for the paragraph
                             data-aos-duration="800"
                             data-aos-delay="200" // Delay for this element

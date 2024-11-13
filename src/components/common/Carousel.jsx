@@ -105,9 +105,9 @@ const Carousel = () => {
                         <button onClick={handlePrevious} className='hidden lg:flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
                             <img src={prev} alt="Previous" loading='lazy' />
                         </button>
-                        <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6'>
+                        <div className='grid place-items-center grid-cols-3 gap-5 md:gap-6  '>
                             {visibleData.map((item, i) => (
-                                <div key={i} className={`bg-[#0A1828] h-full md:h-50 md:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                                <div key={i} className={`bg-[#0A1828] h-full md:h-50 lg:w-80 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-1 py-2 lg:p-3 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
                                     <p className='italic text-[#B5B3B3] hidden md:flex text-sm '>{item.quote}</p>
                                     <img src={item.image} alt={item.name} loading='lazy' />
                                     <p className='text-white text-sm lg:text-base'>{item.name}</p>
@@ -133,14 +133,14 @@ const Carousel = () => {
                 </div>
             </div>
             <div>
-                <div className='md:hidden'>
+                <div className='md:hidden flex items-center flex-col'>
                     <div className='flex items-center justify-between gap-10 p-2'>
-                        <button onClick={handlePrevious} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
+                        {/* <button onClick={handlePrevious} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rounded-full border-2 border-white'>
                             <img src={prev} alt="Previous" loading='lazy' />
-                        </button>
+                        </button> */}
                         <div className='grid place-items-center  gap-5 md:gap-6'>
                             {smallData.map((item, i) => (
-                                <div key={i} className={`bg-[#0A1828] h-full md:h-50 w-56 md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
+                                <div key={i} className={`bg-[#0A1828] h-full w-full md:h-50  md:h-80 text-center flex flex-col gap-4 md:gap-4 items-center justify-around p-4 rounded-2xl ${isAnimating ? 'fade' : 'fade-active'}`}>
                                     <p className='italic text-[#B5B3B3]  md:flex text-sm '>{item.quote}</p>
                                     <img src={item.image} alt={item.name} loading='lazy' />
                                     <p className='text-white text-sm lg:text-base'>{item.name}</p>
@@ -148,14 +148,25 @@ const Carousel = () => {
                                 </div>
                             ))}
                         </div>
-                        <button onClick={handleNext} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rotate-180 rounded-full border-2 border-white'>
+                        {/* <button onClick={handleNext} className='flex items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-12 lg:h-12 rotate-180 rounded-full border-2 border-white'>
                             <img src={prev} alt="Next" loading='lazy' />
-                        </button>
+                        </button> */}
                     </div>
-                    <div className='flex items-center justify-center gap-5 p-5 mt-5'>
+                    {/* <div className='flex items-center justify-center gap-5 p-5 mt-5'>
                         {data.map((_, i) => (
                             <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
                         ))}
+                    </div> */}
+                    <div className='flex items-center justify-center gap-5 p-5 mt-5'>
+                        <button onClick={handlePrevious} className='flex lg:hidden items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-14 lg:h-14 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Previous" loading='lazy' />
+                        </button>
+                        {data.map((_, i) => (
+                            <div key={i} className={`w-2 h-2 rounded-full ${i >= currentIndex && i < currentIndex + 1 ? 'bg-[#179CC4]' : 'bg-slate-400'}`}></div>
+                        ))}
+                        <button onClick={handleNext} className='flex lg:hidden  items-center justify-center bg-[#179CC4] w-5 h-5 p-1 lg:w-16 lg:h-16 rotate-180 rounded-full border-2 border-white'>
+                            <img src={prev} alt="Next" loading='lazy' />
+                        </button>
                     </div>
                 </div>
             </div>

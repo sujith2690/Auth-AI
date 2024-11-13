@@ -32,10 +32,10 @@ const Team = () => {
                 </div>
 
                 {/* Image Section */}
-                <div className="flex gap-4 md:gap-2 overflow-hidden z-10">
+                <div className="flex gap-1 md:gap-2 overflow-hidden z-10 p-2">
                     {/* First Image with Overlay */}
                     <div
-                        className="relative w-32 md:w-48 lg:w-56 h-[180px] lg:h-[300px]"
+                        className="relative w-28 md:w-48 lg:w-56 h-[210px] lg:h-[300px]"
                         data-aos="fade-up" // AOS animation
                         data-aos-duration="400" // Duration for the animation
                     >
@@ -48,7 +48,7 @@ const Team = () => {
 
                     {/* Second Image with Semi-Transparent Overlay */}
                     <div
-                        className="relative w-24 md:w-28 h-[180px] lg:h-[300px]"
+                        className="relative w-24 md:w-28 h-[210px]  lg:h-[300px]"
                         data-aos="fade-up" // AOS animation
                         data-aos-duration="500" // Duration for the animation
                     >
@@ -58,7 +58,7 @@ const Team = () => {
 
                     {/* Third Image with Semi-Transparent Overlay */}
                     <div
-                        className="relative w-24 md:w-28 lg:w-20 h-[180px] lg:h-[300px]"
+                        className="relative w-24 md:w-28 lg:w-20 h-[210px] lg:h-[300px]"
                         data-aos="fade-up" // AOS animation
                         data-aos-duration="600" // Duration for the animation
                     >

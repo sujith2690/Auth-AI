@@ -23,7 +23,7 @@ const ContentView = ({ content, image1, content2, heading }) => {
                         <div>
                             <img
                                 src={image1} 
-                                className='w-full h-full object-cover rounded-lg'
+                                className='w-full h-full object-cover rounded-xl'
                                 alt="home2.png"
                                 loading='lazy'
                             />
