@@ -13,11 +13,11 @@ const WebApplication = () => {
         <>
             <CommonHero heading={'Web Application Development'} content={content} />
             <WebHead />
-            {/* <Something/>
+            <Something/>
             <RunningBar />
             <FutureWeb />
             <FormSubmission/>
-            <Footer /> */}
+            <Footer />
         </>
     )
 }
