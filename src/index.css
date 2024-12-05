@@ -6,6 +6,7 @@
 @tailwind utilities;
 
 @layer base {
+  
   html {
     overflow-x: hidden;
     color: #F2F2F2;
