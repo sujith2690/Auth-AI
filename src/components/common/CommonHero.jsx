@@ -13,7 +13,7 @@ const CommonHero = ({ heading, content }) => {
     }, []);
 
     return (
-        <div className='relative py-6'>
+        <div className='relative py-6 bg-inherit'>
             <div className='absolute w-full h-full text-gray-200 max-h-[300px] gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
                 <div className='flex items-center justify-center'>
                     <div className='w-5/6 lg:w-4/6 flex flex-col items-center justify-center gap-2'>
