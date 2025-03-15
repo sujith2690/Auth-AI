@@ -29,24 +29,27 @@ const Contact = () => {
     ];
 
     return (
-        <div className='relative bg-inherit flex items-center justify-center'>
+        <div className='relative bg-inherit flex items-center justify-center py-5'>
             <div>
                 {/* <div className='grid grid-cols-3 items-center justify-center p-5  gap-6 md:gap-10'> */}
-                <div className='flex flex-wrap items-center justify-center p-2 md:p-5  gap-6 md:gap-10'>
+                <div className='grid grid-cols-2 lg:grid-cols-3 place-items-center items-center justify-center p-2 md:p-5 gap-6 md:gap-10'>
                     {address.map((item, i) => (
                         <div
                             key={i}
-                            className='bg-[#0A1823] w-36 h-20 md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5'
-                            data-aos="fade-up" // AOS animation
-                            data-aos-duration={(i + 1) * 200} // Varying duration for each item
+                            className={`bg-[#0A1823] w-36 h-20 md:w-[200px] md:h-[150px] flex flex-col items-center justify-center gap-4 rounded-2xl px-4 py-5 
+                ${i === 2 ? 'col-span-2 lg:col-span-1 place-self-center' : ''}`}
+                            data-aos="fade-up"
+                            data-aos-duration={(i + 1) * 200}
                         >
                             <span className="text-[#22AAD2] text-xl md:text-3xl">{item.icon}</span>
-                            <p className='text-white text-wrap text-[10px] md:text-base text-center flex '>
+                            <p className='text-white text-wrap text-[10px] md:text-base text-center flex'>
                                 {item.details}
                             </p>
                         </div>
                     ))}
                 </div>
+
+
             </div>
         </div>
     );

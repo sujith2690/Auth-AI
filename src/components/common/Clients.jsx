@@ -10,7 +10,7 @@ const Clients = () => {
     ];
 
     return (
-        <div className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-20 bg-gradient-to-r from-[#0788AE] to-[#22AAD2] p-5 md:py-3'>
+        <div className='flex flex-col md:flex-row items-center justify-center gap-5 md:gap-20 bg-gradient-to-r from-[#0788AE] to-[#22AAD2] p-5 md:py-3 overflow-x-hidden'>
             {specialData.map((item, i) => (
                 <div
                     key={i}

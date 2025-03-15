@@ -16,11 +16,11 @@ const FormSubmission = () => {
         <div className='flex items-center justify-center bg-inherit'>
             <div className='flex flex-col gap-10 items-center justify-center p-2'>
                 <div 
-                    className='w-4/6 text-center' 
+                    className=' w-full md:w-4/6 text-center' 
                     data-aos="fade-up" // AOS animation for header
                 >
                     <h3 className='text-lg md:text-xl lg:text-4xl'>Connect With Us Today!</h3>
-                    <p className='text-sm md:text-base'>Whether you have questions about our services, want to request a consultation, or are ready to get started, we're just a click away. Fill out the form, and one of our experts will be in touch with you shortly.</p>
+                    <p className='text-sm md:text-base w-full p-2'>Whether you have questions about our services, want to request a consultation, or are ready to get started, we're just a click away. Fill out the form, and one of our experts will be in touch with you shortly.</p>
                 </div>
                 <div 
                     className='md:w-4/6 bg-[#0A1828] rounded-2xl p-3 md:p-10 space-y-6'

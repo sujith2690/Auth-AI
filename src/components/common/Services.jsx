@@ -24,7 +24,7 @@ const Services = () => {
     ];
 
     return (
-        <div className='flex flex-col items-center justify-center p-4 bg-[#050E17]'>
+        <div className='flex flex-col items-center  p-4 bg-[#050E17] overflow-x-hidden'>
             <div className='flex flex-col gap-4 p-4'>
                 <p className="text-[#22AAD2] text-center text-sm md:text-lg">― Our Services</p>
                 <h3 className='flex flex-col text-center text-2xl md:text-4xl'>
@@ -32,7 +32,7 @@ const Services = () => {
                 </h3>
             </div>
 
-            <div className='grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8'>
+            <div className='grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 overflow-hidden '>
                 {
                     serviceItems.map((item, i) => (
                         <div

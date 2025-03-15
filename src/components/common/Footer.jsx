@@ -49,14 +49,14 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer className='bg-inherit'>
+        <footer className='bg-inherit overflow-x-hidden'>
             <div className='flex items-center justify-center'>
                 <div
-                    className="bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-12 lg:w-5/6"
+                    className="bg-[#060F1A] text-white p-2 md:p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-12 lg:w-5/6 overflow-hidden"
                     data-aos="fade-up" // AOS animation for the whole footer
                     data-aos-duration="500" // Duration of the animation
                 >
-                    <div className='flex items-center justify-center p-2'>
+                    <div className='flex items-center justify-center p-2 '>
                         <div className='flex flex-col gap-2'>
                             <p className='flex text-center text-sm'>
                                 {

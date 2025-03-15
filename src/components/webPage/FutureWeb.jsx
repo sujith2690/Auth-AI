@@ -5,7 +5,7 @@ const FutureWeb = () => {
     const content = "Web applications rely on a diverse set of software tools and technologies. Front-end frameworks like React, Angular, and Vue.js enable developers to build interactive and engaging user interfaces. On the back-end, technologies like Node.js, Django, and Ruby on Rails handle server-side logic, database interactions, and application security. These tools, combined with cloud services like AWS, Azure, and Google Cloud, empower developers to create scalable and robust web applications that meet the evolving demands of users and businesses alike.";
 
     return (
-        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]" data-aos="fade-up">
+        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A] overflow-x-hidden" data-aos="fade-up">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
                 <div className='p-5'>
                     <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 md:p-6">

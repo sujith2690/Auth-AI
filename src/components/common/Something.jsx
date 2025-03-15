@@ -15,7 +15,7 @@ const Something = () => {
         navigate(`/contact`);
     }
     return (
-        <div className='bg-inherit py-24 md:p-8 lg:p-12'>
+        <div className='bg-inherit py-24 md:p-8 lg:p-12 overflow-x-hidden'>
             <div className='relative flex items-center justify-center'>
                 <img className='md:w-5/6 md:max-h-[500px] object-cover' src={image} alt="Background" loading='lazy' />
                 <div className='absolute inset-0 bg-[#060F1AE5] opacity-90'></div>

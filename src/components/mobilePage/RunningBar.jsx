@@ -41,7 +41,7 @@ const RunningBar = () => {
     ];
 
     return (
-        <div className="flex bg-inherit items-center justify-center p-4 py-10">
+        <div className="flex bg-inherit items-center justify-center p-4 py-10 overflow-x-hidden">
             <div className='flex flex-col gap-2 md:gap-4 w-5/6'>
                 <Marquee pauseOnHover speed={50} direction='right' gradient={false}>
                     {images.map((item, i) => (

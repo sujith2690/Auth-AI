@@ -15,7 +15,7 @@ const Team = () => {
     }, []);
 
     return (
-        <div className="flex items-center justify-center min-h-[150px] bg-inherit px-4 py-10">
+        <div className="flex items-center justify-center min-h-[150px] bg-inherit px-4 py-10 overflow-hidden">
             <div className="flex flex-col md:flex-row items-center justify-center max-w-5xl w-full gap-2 md:gap-10 p-4 relative">
                 
                 {/* Text Section */}

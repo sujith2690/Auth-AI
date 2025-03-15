@@ -17,7 +17,7 @@ const Happy = () => {
     }, []);
 
     return (
-        <div className='relative bg-inherit py-4'>
+        <div className='relative bg-inherit py-4 overflow-hidden'>
             <div className='absolute w-full h-full text-gray-200 max-h-[250px] gap-3 md:gap-6 bg-[#060F1AE5] flex flex-col items-center justify-center z-10'>
                 <h2 
                     className='text-sm md:text-2xl lg:text-5xl text-center'

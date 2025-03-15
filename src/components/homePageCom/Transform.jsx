@@ -4,7 +4,7 @@ import image from '../../assets/images/homePage/home2.png';
 
 const Transform = () => {
     return (
-        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A]">
+        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A] overflow-x-hidden">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl p-4 relative">
                 <div className="flex flex-col md:flex-row w-full md:w-auto gap-8 p-2 md:p-6">
                     <div

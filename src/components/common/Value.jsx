@@ -25,8 +25,8 @@ const Value = () => {
     ];
 
     return (
-        <div className='flex flex-col items-center justify-center bg-inherit md:p-5'>
-            <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
+        <div className='flex flex-col items-center justify-center bg-inherit md:p-5 overflow-x-hidden'>
+            <div className='flex flex-col md:flex-row gap-4 items-center justify-center overflow-hidden'>
                 <div className='w-5/6 md:w-1/2 space-y-3 md:space-y-0'>
                     <div className='p-2 flex flex-col gap-3'>
                         <p className='text-[#22AAD2] text-start text-sm md:text-lg '>― Our Value</p>
@@ -37,7 +37,7 @@ const Value = () => {
                             Our diverse expertise spans multiple industries, empowering businesses of all sizes to harness the transformative power of AI and unlock invaluable data-driven insights.
                         </p>
                     </div>
-                    <div className='flex flex-col gap-5'>
+                    <div className='flex flex-col gap-5 '>
                         {integrity.map((item, i) => (
                             <div
                                 key={i}

@@ -28,7 +28,7 @@ const Navbar = () => {
     };
 
     return (
-        <section className="bg-transparent shadow-sm">
+        <section className="bg-transparent shadow-sm z-50 sticky">
             <div className="flex items-center justify-between w-full p-2 md:p-4 lg:px-10">
                 <div>
                     <Link to="/"> {/* Link to home page */}

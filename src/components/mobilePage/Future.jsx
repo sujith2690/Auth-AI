@@ -6,11 +6,11 @@ const Future = () => {
     const content = 'The integration of advanced technology into mobile applications has paved the way for highly personalized and efficient user experiences. Mobile health apps, for instance, now leverage real-time data and predictive analysis to help users monitor and improve their well-being more effectively than ever before.';
 
     return (
-        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A] p-4" data-aos="fade-up">
+        <div className="flex justify-center items-center min-h-[150px] bg-[#060F1A] p-4 overflow-x-hidden" data-aos="fade-up">
             <div className="flex flex-col md:flex-row items-center justify-center gap-4 max-w-5xl relative">
                 <div className='p-5'>
-                    <div className="flex flex-col md:flex-row w-full gap-8 md:p-6">
-                        <div data-aos="zoom-in" data-aos-delay="200">
+                    <div className="flex flex-col md:flex-row w-full gap-8 md:p-6 overflow-x-hidden">
+                        <div data-aos="fade-right" data-aos-delay="200">
                             <img
                                 src={image1} 
                                 className='w-full h-full object-cover rounded-lg'

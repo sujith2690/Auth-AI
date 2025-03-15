@@ -14,14 +14,14 @@ const Portfolio = () => {
     ];
 
     return (
-        <div className='flex flex-col items-center justify-center p-5  bg-inherit'>
+        <div className='flex flex-col items-center justify-center p-5  bg-inherit overflow-x-hidden'>
             <div className='p-2 space-y-5'>
                 <p className='text-[#22AAD2] text-center text-sm md:text-2xl'>― Our Portfolio</p>
                 <h5 className='flex flex-col text-xl md:text-2xl lg:text-4xl text-center'>
                     Work Speaks Volumes: Discover Our Projects
                 </h5>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-4 overflow-hidden'>
                 {portFolioContent.map((item, i) => (
                     <div
                         key={i}

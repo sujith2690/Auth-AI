@@ -36,7 +36,7 @@ const Insight = () => {
     }, []);
 
     return (
-        <div className='bg-[#132030] flex flex-col items-center justify-center'>
+        <div className='bg-[#132030] flex flex-col items-center justify-center overflow-x-hidden'>
             <div>
                 <div className='p-5 flex flex-col gap-2'>
                     <h4 className='text-[#22AAD2] text-sm md:text-2xl'>― Our Insight</h4>
@@ -44,7 +44,7 @@ const Insight = () => {
                 </div>
                 <div>
                     {/* <div className='grid place-items-center grid-cols-2 md:grid-cols-3 gap-5 p-5'> */}
-                    <div className='flex flex-wrap items-center justify-center gap-5 p-4 lg:p-5'>
+                    <div className='flex flex-wrap items-center justify-center gap-5 p-4 lg:p-5 overflow-hidden'>
                         {content.map((item, i) => (
                             <div
                                 key={i}
